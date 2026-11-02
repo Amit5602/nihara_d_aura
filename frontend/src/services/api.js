@@ -342,7 +342,11 @@ export const api = {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, otp })
       });
-      return await res.json();
+      const result = await res.json();
+      if (result && typeof result === 'object' && typeof result.success !== 'boolean') {
+        return { ...result, success: res.ok };
+      }
+      return result;
     } catch (err) {
       return { success: false, message: err.message };
     }

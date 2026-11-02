@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useNavigate, Link, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
@@ -15,6 +15,7 @@ export default function VerifyOTP() {
   const [countdown, setCountdown] = useState(45);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const verificationInProgress = useRef(false);
 
   // Get email from URL params or localStorage
   useEffect(() => {
@@ -56,15 +57,10 @@ export default function VerifyOTP() {
     }
   };
 
-  // Auto-verify when all digits are entered
-  useEffect(() => {
-    const isComplete = otp.every(digit => digit !== '');
-    if (isComplete && email) {
-      handleVerify();
-    }
-  }, [otp]);
+  const handleVerify = async (event) => {
+    event?.preventDefault();
+    if (verificationInProgress.current) return;
 
-  const handleVerify = async () => {
     const fullOtp = otp.join('').trim();
     if (fullOtp.length < 6) {
       setErrorMessage('Please enter the complete 6-digit verification code.');
@@ -76,29 +72,31 @@ export default function VerifyOTP() {
       return;
     }
 
+    verificationInProgress.current = true;
     setIsSubmitting(true);
     setErrorMessage('');
 
     try {
       const res = await api.verifyOtp(email, fullOtp);
-      setIsSubmitting(false);
 
       if (res && res.success) {
-        const verifiedUser = res.user || res.data?.user || {
-          id: 'usr_' + Date.now(),
-          name: email.split('@')[0] || 'Royal Patron',
-          email: email,
-          role: 'user',
-          tier: 'Royal Patron',
-          rewardPoints: 100
-        };
+        const verifiedUser = res.user || res.data?.user;
+        if (!verifiedUser || !res.token) {
+          setErrorMessage('Verification succeeded, but the server did not return a valid sign-in session. Please try again.');
+          return;
+        }
 
         // Force admin role if email matches
         if (email === 'amitkry5602@gmail.com') {
           verifiedUser.role = 'admin';
         }
 
-        login(verifiedUser, res.token);
+        const loginResult = login(verifiedUser, res.token);
+        if (!loginResult.success) {
+          setErrorMessage(loginResult.message || 'Could not start your sign-in session. Please try again.');
+          return;
+        }
+
         localStorage.removeItem('pending_email');
         showToast(`Welcome to Nihara D'Aura, ${verifiedUser.name}!`, 'success');
 
@@ -112,8 +110,10 @@ export default function VerifyOTP() {
         setErrorMessage(res?.message || 'Invalid or expired verification code.');
       }
     } catch (err) {
-      setIsSubmitting(false);
       setErrorMessage(err.message || 'Verification error. Please try again.');
+    } finally {
+      verificationInProgress.current = false;
+      setIsSubmitting(false);
     }
   };
 
@@ -216,7 +216,7 @@ export default function VerifyOTP() {
           </div>
         )}
 
-        <form className="space-y-6 pt-1">
+        <form className="space-y-6 pt-1" onSubmit={handleVerify}>
           <div className="flex items-center justify-center gap-2 sm:gap-2.5">
             {otp.map((digit, i) => (
               <input
@@ -239,8 +239,7 @@ export default function VerifyOTP() {
           </div>
 
           <button
-            type="button"
-            onClick={handleVerify}
+            type="submit"
             disabled={isSubmitting}
             className="w-full py-4 rounded-2xl font-bold text-base text-white bg-[#855F14] hover:bg-[#6e4d0d] active:scale-[0.99] shadow-[0_8px_20px_rgba(133,95,20,0.25)] flex items-center justify-center gap-2 transition-all cursor-pointer disabled:opacity-70"
           >
