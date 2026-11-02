@@ -120,8 +120,11 @@ export const login = async (req, res, next) => {
       { upsert: true, new: true }
     );
 
-    // Send real email via Nodemailer & log to console
-    await sendOtpEmail(cleanEmail, otpCode, existingUser?.name || '', 'login');
+    const delivery = await sendOtpEmail(cleanEmail, otpCode, existingUser?.name || '', 'login');
+    if (!delivery.sent) {
+      await Otp.deleteOne({ email: cleanEmail, otp: otpCode });
+      return errorResponse(res, 'We could not send the verification email. Please try again later.', 503);
+    }
 
     return successResponse(res, {
       email: cleanEmail,
@@ -191,8 +194,11 @@ export const register = async (req, res, next) => {
       { upsert: true, new: true }
     );
 
-    // Send real email via Nodemailer & log to console
-    await sendOtpEmail(cleanEmail, otpCode, cleanName, 'register');
+    const delivery = await sendOtpEmail(cleanEmail, otpCode, cleanName, 'register');
+    if (!delivery.sent) {
+      await Otp.deleteOne({ email: cleanEmail, otp: otpCode });
+      return errorResponse(res, 'We could not send the verification email. Please try again later.', 503);
+    }
 
     return successResponse(res, {
       email: cleanEmail,

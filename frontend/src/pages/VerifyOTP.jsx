@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useNavigate, Link, useSearchParams } from 'react-router-dom';
+import { LoaderCircle, RefreshCw } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
 import { api } from '../services/api';
@@ -13,8 +14,9 @@ export default function VerifyOTP() {
   const { showToast } = useToast();
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
   const [email, setEmail] = useState('');
-  const [countdown, setCountdown] = useState(45);
+  const [countdown, setCountdown] = useState(30);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isResending, setIsResending] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const verificationInProgress = useRef(false);
 
@@ -120,13 +122,13 @@ export default function VerifyOTP() {
   };
 
   const handleResend = async () => {
-    if (countdown > 0) return;
+    if (countdown > 0 || isResending) return;
     if (!email) {
-      showToast('Email not found. Please go back to login.', 'error');
+      setErrorMessage('Email not found. Please go back to login.');
       return;
     }
 
-    setCountdown(45);
+    setIsResending(true);
     setOtp(['', '', '', '', '', '']);
     setErrorMessage('');
 
@@ -135,12 +137,15 @@ export default function VerifyOTP() {
         ? await api.register(localStorage.getItem('pending_signup_name') || '', email)
         : await api.login(email);
       if (res && res.success) {
+        setCountdown(30);
         showToast(`New OTP sent to ${email}`, 'success');
       } else {
-        showToast(res?.message || 'Failed to resend OTP', 'error');
+        setErrorMessage(res?.message || 'Failed to resend OTP. Please try again.');
       }
     } catch (err) {
-      showToast('Error requesting fresh OTP', 'error');
+      setErrorMessage(err.message || 'Error requesting a fresh OTP.');
+    } finally {
+      setIsResending(false);
     }
 
     const firstInput = document.getElementById('otp-0');
@@ -247,14 +252,25 @@ export default function VerifyOTP() {
             disabled={isSubmitting}
             className="w-full py-4 rounded-2xl font-bold text-base text-white bg-[#855F14] hover:bg-[#6e4d0d] active:scale-[0.99] shadow-[0_8px_20px_rgba(133,95,20,0.25)] flex items-center justify-center gap-2 transition-all cursor-pointer disabled:opacity-70"
           >
+            {isSubmitting && <LoaderCircle className="w-4 h-4 animate-spin" />}
             <span>{isSubmitting ? 'Verifying...' : 'Verify & Access Account'}</span>
           </button>
 
-          <div className="text-center text-xs text-stone-500 font-medium space-y-1 pt-1">
-            <p>Resend code available in</p>
-            <p className="text-[#855F14] font-bold text-sm tracking-widest font-mono">
-              {formatTime(countdown)}
-            </p>
+          <div className="flex items-center justify-between text-xs text-stone-600 font-medium pt-1 px-1">
+            <span>{countdown > 0 ? `Resend available in ${formatTime(countdown)}` : "Didn't receive code?"}</span>
+            <button
+              type="button"
+              onClick={handleResend}
+              disabled={countdown > 0 || isResending}
+              className="text-[#855F14] font-bold hover:underline flex items-center gap-1 disabled:text-stone-400 disabled:no-underline disabled:cursor-not-allowed"
+            >
+              {isResending ? (
+                <LoaderCircle className="w-3.5 h-3.5 animate-spin" />
+              ) : (
+                <RefreshCw className="w-3 h-3" />
+              )}
+              <span>{isResending ? 'Sending...' : 'Resend Code'}</span>
+            </button>
           </div>
         </form>
 

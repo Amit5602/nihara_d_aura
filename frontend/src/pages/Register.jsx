@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Sparkles, User, Mail, Lock, ShieldCheck, ArrowRight, AlertCircle, Phone } from 'lucide-react';
+import { Sparkles, User, Mail, Lock, ShieldCheck, ArrowRight, AlertCircle, Phone, LoaderCircle } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
 import { api } from '../services/api';
@@ -224,7 +224,8 @@ export default function Register() {
             disabled={isSubmitting}
             className="w-full py-4 rounded-2xl font-bold text-base text-white bg-[#855F14] hover:bg-[#6e4d0d] active:scale-[0.99] shadow-[0_8px_20px_rgba(133,95,20,0.25)] flex items-center justify-center gap-2 transition-all cursor-pointer disabled:opacity-70 mt-2"
           >
-            <span>{isSubmitting ? 'Creating Account...' : 'Create Account →'}</span>
+            {isSubmitting && <LoaderCircle className="w-4 h-4 animate-spin" />}
+            <span>{isSubmitting ? 'Sending OTP...' : 'Create Account →'}</span>
           </button>
         </form>
 

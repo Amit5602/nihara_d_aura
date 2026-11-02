@@ -44,20 +44,14 @@ const getTransporter = () => {
  * @param {string} purpose - 'register' | 'login'
  */
 export const sendOtpEmail = async (email, otp, fullName = '', purpose = 'login') => {
-  // Always log to console for development mode
-  console.log('\n========================================');
-  console.log(`✨ [AUTH OTP DISPATCH]`);
-  console.log(`📧 Recipient: ${email}`);
-  console.log(`👤 Name: ${fullName || 'Patron'}`);
-  console.log(`🎯 Purpose: ${purpose.toUpperCase()}`);
-  console.log(`🔑 6-Digit OTP Code: >> [ ${otp} ] <<`);
-  console.log(`⏳ Valid For: 10 minutes`);
-  console.log('========================================\n');
+  if (process.env.NODE_ENV !== 'production') {
+    console.log(`[AUTH OTP] ${purpose} code generated for ${email}; valid for 10 minutes.`);
+  }
 
   try {
     const transporter = getTransporter();
     if (!transporter) {
-      console.warn('[EmailService] Transporter not configured. OTP printed to console above.');
+      console.error('[EmailService] Email transport is not configured.');
       return { sent: false, reason: 'Credentials not configured' };
     }
 
@@ -124,7 +118,6 @@ export const sendOtpEmail = async (email, otp, fullName = '', purpose = 'login')
     return { sent: true, messageId: info.messageId };
   } catch (err) {
     console.error(`[EmailService] ⚠️ SMTP Dispatch Notice: ${err.message}`);
-    // Non-fatal: OTP was already logged to console above so development/testing continues seamlessly!
     return { sent: false, error: err.message };
   }
 };
