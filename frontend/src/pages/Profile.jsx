@@ -64,7 +64,7 @@ export default function Profile() {
         phone: user.phone || prev.phone,
         avatar: user.avatar || prev.avatar
       }));
-      setPreviewPhoto(user.avatar || prev.avatar);
+      setPreviewPhoto((currentPhoto) => user.avatar || currentPhoto);
     }
   }, [user]);
 
