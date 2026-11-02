@@ -40,19 +40,23 @@ export function AuthProvider({ children }) {
         setUser(res.user);
         setIsAuthenticated(true);
         saveState(res.user, true, token);
+      } else if (res?.status === 401 || res?.status === 403) {
+        setUser(null);
+        setIsAuthenticated(false);
+        setToken(null);
+        saveState(null, false, null);
       } else {
+        console.warn('Could not refresh the sign-in profile; keeping the verified session.');
+      }
+    }).catch((error) => {
+      if (!active) return;
+      console.error('Could not validate the saved sign-in session:', error.message);
+      if (error.status === 401 || error.status === 403) {
         setUser(null);
         setIsAuthenticated(false);
         setToken(null);
         saveState(null, false, null);
       }
-    }).catch((error) => {
-      if (!active) return;
-      console.error('Could not validate the saved sign-in session:', error.message);
-      setUser(null);
-      setIsAuthenticated(false);
-      setToken(null);
-      saveState(null, false, null);
     });
     return () => { active = false; };
   }, [token]);

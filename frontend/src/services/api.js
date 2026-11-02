@@ -244,7 +244,14 @@ export const api = {
       headers: stored?.token ? { Authorization: `Bearer ${stored.token}` } : {}
     });
     const result = await response.json();
-    if (!response.ok) throw new Error(result.message || 'Session validation failed');
+    if (!response.ok) {
+      const error = new Error(result.message || 'Session validation failed');
+      error.status = response.status;
+      throw error;
+    }
+    if (result && typeof result === 'object' && typeof result.success !== 'boolean') {
+      return { ...result, success: true };
+    }
     return result;
   },
 
