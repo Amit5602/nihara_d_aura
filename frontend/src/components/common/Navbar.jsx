@@ -122,7 +122,7 @@ export default function Navbar() {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`relative py-1 text-sm font-medium tracking-[0.1em] uppercase transition-colors ${
+                  className={`relative py-1 text-sm font-medium tracking-[0.1em] transition-colors ${
                     isActive 
                       ? 'text-[#C59B27] font-semibold' 
                       : 'text-[#26221F] hover:text-[#C59B27]'
@@ -168,7 +168,7 @@ export default function Navbar() {
             </div>
             <Link
               to={bookingLink.path}
-              className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#B3861B] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white shadow-[0_12px_20px_-12px_rgba(184,134,11,0.9)] transition-all hover:scale-[1.02] hover:shadow-[0_16px_24px_-12px_rgba(184,134,11,0.95)]"
+              className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#B3861B] px-4 py-2 text-[10px] font-bold tracking-[0.1em] text-white shadow-[0_12px_20px_-12px_rgba(184,134,11,0.9)] transition-all hover:scale-[1.02] hover:shadow-[0_16px_24px_-12px_rgba(184,134,11,0.95)]"
             >
               <Calendar className="w-3.5 h-3.5" />
               <span>{bookingLink.label}</span>
@@ -282,7 +282,7 @@ export default function Navbar() {
                 )}
                 <button
                   type="submit"
-                  className="px-3.5 sm:px-5 py-1.5 sm:py-2 text-[11px] sm:text-xs font-semibold tracking-wider uppercase text-white bg-gradient-to-r from-[#D4AF37] to-[#B3861B] rounded-full hover:shadow-md hover:scale-102 transition-all"
+                  className="px-3.5 sm:px-5 py-1.5 sm:py-2 text-[11px] sm:text-xs font-semibold tracking-wider text-white bg-gradient-to-r from-[#D4AF37] to-[#B3861B] rounded-full hover:shadow-md hover:scale-102 transition-all"
                 >
                   Search
                 </button>
@@ -291,7 +291,7 @@ export default function Navbar() {
 
             {/* Popular Searches Quick Tags */}
             <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none text-[11px]">
-              <span className="text-stone-400 uppercase tracking-wider font-bold whitespace-nowrap text-[10px]">
+              <span className="text-stone-400 tracking-wider font-bold whitespace-nowrap text-[10px]">
                 Popular:
               </span>
               {[
@@ -333,7 +333,7 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="rounded-xl border border-[#E8DFC8] bg-white/70 p-3">
-            <p className="px-1 pb-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#9b711e]">Services</p>
+            <p className="px-1 pb-1 text-[10px] font-bold tracking-[0.1em] text-[#9b711e]">Services</p>
             <div className="grid grid-cols-2 gap-1">
               {[
                 { label: 'Makeup', path: '/services/makeup' },
