@@ -115,11 +115,9 @@ export default function Login() {
       setIsSubmitting(false);
 
       if (res && res.success) {
-        setIdentifier(cleanInput);
-        setOtp(['', '', '', '', '', '']);
-        setResendTimer(45);
-        setOtpStep('enter_otp');
+        localStorage.setItem('pending_email', cleanInput);
         showToast(res.message || `Verification OTP sent to ${cleanInput}`, 'success');
+        navigate('/verify-otp');
       } else {
         setErrorMessage(res?.message || 'Failed to dispatch OTP. Please check your email and try again.');
       }
