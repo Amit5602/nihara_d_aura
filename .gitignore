@@ -30,6 +30,9 @@ frontend/build/
 dist/
 build/
 
+# Local API comparison document
+/Nihara API_DOCUMENTATION.md
+
 # OS and Editor files
 .DS_Store
 Thumbs.db
