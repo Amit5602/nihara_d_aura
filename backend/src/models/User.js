@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 
+const LEGACY_DEFAULT_AVATAR = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d';
+
 const UserSchema = new mongoose.Schema({
   id: { type: String },
   name: { type: String, required: true, trim: true },
@@ -7,7 +9,7 @@ const UserSchema = new mongoose.Schema({
   phone: { type: String, required: false, default: '', trim: true },
   password: { type: String, select: false },
   role: { type: String, enum: ['user', 'admin'], default: 'user' },
-  avatar: { type: String, default: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d' },
+  avatar: { type: String, default: '' },
   tier: { type: String, enum: ['Silver', 'Gold', 'Royal Elite', 'Royal Patron', 'Master Admin'], default: 'Royal Elite' },
   rewardPoints: { type: Number, default: 450 },
   wishlist: [{ type: String }]
@@ -17,6 +19,7 @@ const UserSchema = new mongoose.Schema({
     virtuals: true,
     transform: (doc, ret) => {
       ret.id = ret.id || ret._id.toString();
+      if (ret.avatar === LEGACY_DEFAULT_AVATAR) ret.avatar = '';
       return ret;
     }
   }

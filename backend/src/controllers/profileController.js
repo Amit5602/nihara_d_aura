@@ -24,10 +24,51 @@ export const getProfile = async (req, res, next) => {
 
 export const updateProfile = async (req, res, next) => {
   try {
+    const currentUser = await User.findOne(userFilter(req.userId));
+    if (!currentUser) return errorResponse(res, 'User not found', 404);
+
     const updates = {};
-    for (const field of ['name', 'phone', 'avatar']) {
+    for (const field of ['name', 'avatar']) {
       if (req.body[field] !== undefined) updates[field] = req.body[field];
     }
+    if (req.body.phone !== undefined) {
+      if (typeof req.body.phone !== 'string') {
+        return errorResponse(res, 'Please provide a valid phone number.', 400);
+      }
+      const phone = req.body.phone.trim();
+      if (phone) {
+        const digits = phone.replace(/\D/g, '');
+        const mobile = digits.length === 12 && digits.startsWith('91') ? digits.slice(2) : digits;
+        if (!/^[6-9]\d{9}$/.test(mobile)) {
+          return errorResponse(res, 'Please provide a valid 10-digit mobile number.', 400);
+        }
+        const formattedDigits = mobile.split('').join('[\\s().-]*');
+        const phonePattern = new RegExp(`^(?:\\+?91[\\s().-]*)?${formattedDigits}$`);
+        const existingPhone = await User.findOne({
+          phone: phonePattern,
+          _id: { $ne: currentUser._id }
+        });
+        if (existingPhone) {
+          return errorResponse(res, 'An account already exists with this phone number.', 409);
+        }
+      }
+      updates.phone = phone;
+    }
+
+    if (req.body.email !== undefined) {
+      const email = typeof req.body.email === 'string' ? req.body.email.trim().toLowerCase() : '';
+      const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+      if (!emailRegex.test(email)) {
+        return errorResponse(res, 'Please provide a valid email address.', 400);
+      }
+
+      const existingUser = await User.findOne({ email, _id: { $ne: currentUser._id } });
+      if (existingUser) {
+        return errorResponse(res, 'An account already exists with this email address.', 409);
+      }
+      updates.email = email;
+    }
+
     const user = await User.findOneAndUpdate(userFilter(req.userId), { $set: updates }, {
       new: true,
       runValidators: true

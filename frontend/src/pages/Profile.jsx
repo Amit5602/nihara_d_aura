@@ -15,7 +15,6 @@ import {
   Check,
   Image as ImageIcon,
   ShieldCheck,
-  KeyRound,
   Camera,
   Phone,
   User,
@@ -26,7 +25,6 @@ import {
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
 import { api } from '../services/api';
-import couponsData from '../data/coupons';
 
 export default function Profile() {
   const navigate = useNavigate();
@@ -35,69 +33,75 @@ export default function Profile() {
 
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isPhotoModalOpen, setIsPhotoModalOpen] = useState(false);
-  const [previewPhoto, setPreviewPhoto] = useState(user?.avatar || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d');
+  const [previewPhoto, setPreviewPhoto] = useState(user?.avatar || '');
   const [isDragOver, setIsDragOver] = useState(false);
   const [selectedFileName, setSelectedFileName] = useState('');
 
-  const [ordersCount, setOrdersCount] = useState(0);
-  const [wishlistCount, setWishlistCount] = useState(0);
-  const [couponsCount, setCouponsCount] = useState(0);
+  const [ordersStat, setOrdersStat] = useState({ userId: null, count: null });
+  const [wishlistStat, setWishlistStat] = useState({ userId: null, count: null });
+  const [statsError, setStatsError] = useState({ userId: null, message: '' });
   const [availableCoupons, setAvailableCoupons] = useState([]);
+  const [couponsLoaded, setCouponsLoaded] = useState(false);
+  const [couponsError, setCouponsError] = useState('');
   const [isCouponModalOpen, setIsCouponModalOpen] = useState(false);
 
   const fileInputRef = useRef(null);
 
   const [formData, setFormData] = useState({
-    name: user?.name || 'Amit Kumar',
-    email: user?.email || 'amitky2056@gmail.com',
-    phone: user?.phone || '+918004116370',
-    avatar: user?.avatar || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d'
+    name: user?.name || '',
+    email: user?.email || '',
+    phone: user?.phone || ''
   });
+  const avatarInitials = (user?.name || '')
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0].toUpperCase())
+    .join('');
 
-  // Keep form synchronized if user profile updates
   useEffect(() => {
-    if (user) {
-      setFormData(prev => ({
-        ...prev,
-        name: user.name || prev.name,
-        email: user.email || prev.email,
-        phone: user.phone || prev.phone,
-        avatar: user.avatar || prev.avatar
-      }));
-      setPreviewPhoto((currentPhoto) => user.avatar || currentPhoto);
-    }
-  }, [user]);
+    let active = true;
+    if (!user?.id) return () => { active = false; };
 
-  // Live sync of counts for Orders, Wishlist, and Coupons
-  useEffect(() => {
-    if (api && typeof api.getOrders === 'function') {
-      api.getOrders()
-        .then(res => {
-          if (res && res.orders) {
-            setOrdersCount(res.orders.length);
-          }
-        })
-        .catch(() => {});
-    }
+    api.getMyOrders()
+      .then((res) => {
+        if (active) setOrdersStat({ userId: user.id, count: res.orders.length });
+      })
+      .catch((error) => {
+        console.error('Could not load the signed-in user orders:', error.message);
+        if (active) setStatsError({ userId: user.id, message: error.message });
+      });
+    api.getMyWishlist()
+      .then((res) => {
+        if (active) setWishlistStat({ userId: user.id, count: res.wishlist.length });
+      })
+      .catch((error) => {
+        console.error('Could not load the signed-in user wishlist:', error.message);
+        if (active) setStatsError({ userId: user.id, message: error.message });
+      });
+    api.getOffers()
+      .then((res) => {
+        if (!active) return;
+        const now = Date.now();
+        const offers = res.offers.filter((offer) => {
+          if (offer.isActive === false) return false;
+          if (!offer.validTill) return true;
+          return new Date(`${offer.validTill}T23:59:59`).getTime() >= now;
+        });
+        setAvailableCoupons(offers);
+        setCouponsLoaded(true);
+      })
+      .catch((error) => {
+        console.error('Could not load active offers:', error.message);
+        if (active) {
+          setCouponsError(error.message);
+          setCouponsLoaded(true);
+        }
+      });
 
-    try {
-      const savedWishlist = JSON.parse(localStorage.getItem('nihara_wishlist') || '[]');
-      if (Array.isArray(savedWishlist)) {
-        setWishlistCount(savedWishlist.length);
-      }
-    } catch (e) {}
-
-    try {
-      const localCoupons = JSON.parse(localStorage.getItem('nda_coupons') || 'null');
-      const list = Array.isArray(localCoupons) && localCoupons.length > 0 ? localCoupons : (couponsData || []);
-      const active = (list || []).filter(c => c && c.isActive !== false);
-      setCouponsCount(active.length);
-      setAvailableCoupons(active);
-    } catch (e) {
-      setCouponsCount(0);
-      setAvailableCoupons([]);
-    }
-  }, []);
+    return () => { active = false; };
+  }, [user?.id]);
 
   // Auth guard: redirect to login if not authenticated (safe after all hooks)
   if (!isAuthenticated) {
@@ -174,21 +178,28 @@ export default function Profile() {
 
   // Save photo to auth state & backend
   const handleApplyPhoto = async () => {
-    setFormData(prev => ({ ...prev, avatar: previewPhoto }));
-    await updateProfile({ avatar: previewPhoto });
-    setIsPhotoModalOpen(false);
-    showToast('Profile photo updated successfully!', 'success');
+    try {
+      await updateProfile({ avatar: previewPhoto });
+      setIsPhotoModalOpen(false);
+      showToast('Profile photo updated successfully!', 'success');
+    } catch (error) {
+      showToast(error.message || 'Could not update your profile photo.', 'error');
+    }
   };
 
   const handleSaveProfile = async (e) => {
     e.preventDefault();
-    await updateProfile({
-      name: formData.name,
-      email: formData.email,
-      phone: formData.phone
-    });
-    setIsEditModalOpen(false);
-    showToast('Profile details updated successfully!', 'success');
+    try {
+      await updateProfile({
+        name: formData.name.trim(),
+        email: formData.email.trim().toLowerCase(),
+        phone: formData.phone.trim()
+      });
+      setIsEditModalOpen(false);
+      showToast('Profile details updated successfully!', 'success');
+    } catch (error) {
+      showToast(error.message || 'Could not update your profile details.', 'error');
+    }
   };
 
   const handleLogout = () => {
@@ -205,6 +216,12 @@ export default function Profile() {
         icon: ShieldCheck,
         link: '/admin',
         badge: 'Admin Panel'
+      },
+      {
+        title: 'Settings',
+        subtitle: 'Manage store preferences',
+        icon: Settings,
+        link: '/admin/settings'
       }
     ] : []),
     {
@@ -236,12 +253,6 @@ export default function Profile() {
       subtitle: 'support@niharadaura.com • 24/7 Support',
       icon: HelpCircle,
       onClick: () => showToast('Concierge: support@niharadaura.com | +91 92660 59846', 'info')
-    },
-    {
-      title: 'Settings',
-      subtitle: 'Notifications, currency & privacy',
-      icon: Settings,
-      onClick: () => showToast('Preferences updated: INR (₹) / SMS Enabled', 'info')
     }
   ];
 
@@ -261,17 +272,23 @@ export default function Profile() {
           <div 
             className="relative group cursor-pointer flex-shrink-0"
             onClick={() => {
-              setPreviewPhoto(user?.avatar || formData.avatar);
+              setPreviewPhoto(user?.avatar || '');
               setSelectedFileName('');
               fileInputRef.current?.click();
             }}
             title="Click to upload profile photo"
           >
-            <img
-              src={user?.avatar || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d'}
-              alt={user?.name || 'User'}
-              className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-2 border-[#C59B27] shadow-sm group-hover:opacity-90 transition-all"
-            />
+            {user?.avatar ? (
+              <img
+                src={user.avatar}
+                alt={user.name || 'Profile'}
+                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-2 border-[#C59B27] shadow-sm group-hover:opacity-90 transition-all"
+              />
+            ) : (
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#FAF3E8] border-2 border-[#C59B27] text-[#855F14] flex items-center justify-center font-semibold text-lg">
+                {avatarInitials || <User className="w-7 h-7" />}
+              </div>
+            )}
             <div 
               className="absolute -bottom-0.5 -right-0.5 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#C59B27] text-white flex items-center justify-center shadow-md border-2 border-white group-hover:scale-110 group-hover:bg-[#A87D17] transition-transform"
               title="Upload photo"
@@ -283,17 +300,19 @@ export default function Profile() {
           {/* User Details: Only Name, Email, Phone Number */}
           <div className="min-w-0">
             <h2 className="font-serif text-lg sm:text-xl font-bold text-[#1C1917] tracking-tight truncate">
-              {user?.name || 'Amit Kumar'}
+              {user?.name || 'Name not provided'}
             </h2>
             <p className="text-xs sm:text-sm text-stone-500 mt-0.5 truncate">
-              {user?.email || 'amitky2056@gmail.com'}
+              {user?.email || 'Email not provided'}
             </p>
-            <div className="flex items-center gap-1.5 text-xs sm:text-sm font-medium mt-1">
-              <Phone className="w-3.5 h-3.5 text-[#E91E63] fill-[#E91E63] flex-shrink-0" />
-              <span className="text-[#855F14] font-semibold tracking-wide">
-                {user?.phone || '+918004116370'}
-              </span>
-            </div>
+            {user?.phone && (
+              <div className="flex items-center gap-1.5 text-xs sm:text-sm font-medium mt-1">
+                <Phone className="w-3.5 h-3.5 text-[#E91E63] fill-[#E91E63] flex-shrink-0" />
+                <span className="text-[#855F14] font-semibold tracking-wide">
+                  {user.phone}
+                </span>
+              </div>
+            )}
           </div>
         </div>
 
@@ -301,10 +320,9 @@ export default function Profile() {
         <button
           onClick={() => {
             setFormData({
-              name: user?.name || 'Amit Kumar',
-              email: user?.email || 'amitky2056@gmail.com',
-              phone: user?.phone || '+918004116370',
-              avatar: user?.avatar || formData.avatar
+              name: user?.name || '',
+              email: user?.email || '',
+              phone: user?.phone || ''
             });
             setIsEditModalOpen(true);
           }}
@@ -327,7 +345,7 @@ export default function Profile() {
             <Package className="w-5 h-5" />
           </div>
           <span className="font-bold text-xl sm:text-2xl text-[#1C1917] leading-none mb-1">
-            {ordersCount}
+            {ordersStat.userId === user?.id ? ordersStat.count : '—'}
           </span>
           <span className="text-xs text-stone-500 font-medium">
             Orders
@@ -343,7 +361,7 @@ export default function Profile() {
             <Heart className="w-5 h-5 text-rose-500" />
           </div>
           <span className="font-bold text-xl sm:text-2xl text-[#1C1917] leading-none mb-1">
-            {wishlistCount}
+            {wishlistStat.userId === user?.id ? wishlistStat.count : '—'}
           </span>
           <span className="text-xs text-stone-500 font-medium">
             Wishlist
@@ -353,6 +371,7 @@ export default function Profile() {
         {/* Coupons Card */}
         <div 
           onClick={() => {
+            if (!couponsLoaded) return;
             if (availableCoupons.length > 0) {
               setIsCouponModalOpen(true);
             } else {
@@ -365,7 +384,7 @@ export default function Profile() {
             <Ticket className="w-5 h-5 text-amber-600" />
           </div>
           <span className="font-bold text-xl sm:text-2xl text-[#1C1917] leading-none mb-1">
-            {couponsCount}
+            {couponsLoaded ? availableCoupons.length : '—'}
           </span>
           <span className="text-xs text-stone-500 font-medium">
             Coupons
@@ -373,6 +392,17 @@ export default function Profile() {
         </div>
 
       </div>
+
+      {statsError.userId === user?.id && statsError.message && (
+        <p role="alert" className="text-center text-sm text-rose-700 mb-5">
+          Could not load your profile activity: {statsError.message}
+        </p>
+      )}
+      {couponsError && (
+        <p role="alert" className="text-center text-sm text-rose-700 mb-5">
+          Could not load available coupons: {couponsError}
+        </p>
+      )}
 
       {/* Menu Options List with warm luxury golden styling */}
       <div className="space-y-3 lg:space-y-4 mb-6 lg:mb-10">
@@ -466,11 +496,17 @@ export default function Profile() {
             {/* Circular Avatar Preview */}
             <div className="flex flex-col items-center justify-center mb-6">
               <div className="relative">
-                <img
-                  src={previewPhoto}
-                  alt="Avatar preview"
-                  className="w-28 h-28 rounded-full object-cover border-4 border-[#C59B27] shadow-lg"
-                />
+                {previewPhoto ? (
+                  <img
+                    src={previewPhoto}
+                    alt="Profile preview"
+                    className="w-28 h-28 rounded-full object-cover border-4 border-[#C59B27] shadow-lg"
+                  />
+                ) : (
+                  <div className="w-28 h-28 rounded-full bg-[#FAF3E8] border-4 border-[#C59B27] text-[#855F14] flex items-center justify-center font-semibold text-2xl shadow-lg">
+                    {avatarInitials || <User className="w-10 h-10" />}
+                  </div>
+                )}
                 <span className="absolute bottom-0 right-0 px-2 py-0.5 bg-[#C59B27] text-white text-[9px] font-bold uppercase rounded-full shadow">
                   Preview
                 </span>
@@ -597,7 +633,7 @@ export default function Profile() {
                     type="email"
                     required
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value.toLowerCase() })}
                     placeholder="Enter email address"
                     className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-stone-300 text-sm text-stone-900 bg-stone-50/50 focus:bg-white focus:outline-none focus:border-[#C59B27] focus:ring-1 focus:ring-[#C59B27] transition-all"
                   />
@@ -613,7 +649,6 @@ export default function Profile() {
                   <Phone className="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                   <input
                     type="tel"
-                    required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="Enter mobile number"

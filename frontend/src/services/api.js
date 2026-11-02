@@ -19,7 +19,7 @@ const getAuthHeaders = () => {
 };
 
 // Safe request wrapper that tries the Express server first and falls back to mockData
-async function request(endpoint, options = {}) {
+async function request(endpoint, options = {}, useFallback = true) {
   try {
     const authHeaders = getAuthHeaders();
     delete authHeaders['x-user-role'];
@@ -37,6 +37,7 @@ async function request(endpoint, options = {}) {
     }
     return await res.json();
   } catch (err) {
+    if (!useFallback) throw err;
     console.warn(`[API Fallback] Request to ${endpoint} routed to offline mock store:`, err.message);
     return null; // Will trigger service fallback
   }
@@ -75,6 +76,12 @@ export const api = {
     const serverRes = await request('/categories');
     if (serverRes && serverRes.categories) return serverRes;
     return { success: true, categories: mockData.categories };
+  },
+
+  async getOffers() {
+    const serverRes = await request('/offers', {}, false);
+    if (serverRes && Array.isArray(serverRes.offers)) return serverRes;
+    throw new Error(serverRes?.message || 'Could not load active offers.');
   },
 
   async getCategoryBySlug(slug) {
@@ -170,6 +177,12 @@ export const api = {
     return { success: true, wishlist: [] };
   },
 
+  async getMyWishlist() {
+    const serverRes = await request('/profile/wishlist', {}, false);
+    if (serverRes && Array.isArray(serverRes.wishlist)) return serverRes;
+    throw new Error(serverRes?.message || 'Could not load your wishlist.');
+  },
+
   async toggleWishlistOnServer(productId) {
     return await request(`/profile/wishlist/${productId}`, {
       method: 'POST'
@@ -221,6 +234,12 @@ export const api = {
     return { success: true, orders: mockData.orders };
   },
 
+  async getMyOrders() {
+    const serverRes = await request('/orders', {}, false);
+    if (serverRes && Array.isArray(serverRes.orders)) return serverRes;
+    throw new Error(serverRes?.message || 'Could not load your orders.');
+  },
+
   async createOrder(orderData) {
     const serverRes = await request('/orders', {
       method: 'POST',
@@ -233,9 +252,9 @@ export const api = {
 
   // Profile & Addresses
   async getProfile() {
-    const serverRes = await request('/profile');
+    const serverRes = await request('/profile', {}, false);
     if (serverRes && serverRes.user) return serverRes;
-    return { success: true, user: mockData.users[0] };
+    throw new Error(serverRes?.message || 'Could not load your profile.');
   },
 
   async getCurrentUser() {
@@ -259,10 +278,9 @@ export const api = {
     const serverRes = await request('/profile/update', {
       method: 'PUT',
       body: JSON.stringify(data)
-    });
+    }, false);
     if (serverRes && serverRes.user) return serverRes;
-    Object.assign(mockData.users[0], data);
-    return { success: true, user: mockData.users[0] };
+    throw new Error(serverRes?.message || 'Profile update failed.');
   },
 
   async getAddresses() {
