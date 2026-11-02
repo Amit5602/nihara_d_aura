@@ -97,15 +97,21 @@ export default function Login() {
     if (e) e.preventDefault();
     setErrorMessage('');
 
-    const cleanInput = identifier.trim().toLowerCase();
+    const rawInput = identifier.trim().toLowerCase();
+    const isPhone = !rawInput.includes('@');
+    const cleanInput = isPhone ? rawInput.replace(/\D/g, '') : rawInput;
     if (!cleanInput) {
-      setErrorMessage('Please enter your email address.');
+      setErrorMessage('Please enter your email address or mobile number.');
       return;
     }
 
     const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
-    if (!emailRegex.test(cleanInput)) {
-      setErrorMessage('Please enter a valid standard email address in lowercase (e.g., yourname@domain.com).');
+    if (isPhone && !/^[6-9]\d{9}$/.test(cleanInput)) {
+      setErrorMessage('Please enter a valid 10-digit mobile number.');
+      return;
+    }
+    if (!isPhone && !emailRegex.test(cleanInput)) {
+      setErrorMessage('Please enter a valid email address.');
       return;
     }
 
@@ -345,7 +351,7 @@ export default function Login() {
                   type="email"
                   required
                   value={adminEmail}
-                  onChange={(e) => setAdminEmail(e.target.value)}
+                  onChange={(e) => setAdminEmail(e.target.value.toLowerCase())}
                   placeholder="admin@niharadaura.com"
                   className="w-full pl-10 pr-4 py-3.5 rounded-2xl border-2 border-[#C59B27] hover:border-[#855F14] focus:border-[#855F14] bg-[#FCFAF6] focus:bg-white text-stone-900 placeholder:text-stone-400 text-sm font-medium focus:outline-none focus:ring-4 focus:ring-[#C59B27]/20 transition-all shadow-[inset_0_1px_2px_rgba(0,0,0,0.02)]"
                 />
@@ -425,9 +431,7 @@ export default function Login() {
                       required
                       value={identifier}
                       onChange={(e) => {
-                        const val = e.target.value;
-                        const cleaned = val.includes('@') || /[A-Z]/.test(val) ? val.toLowerCase() : val;
-                        setIdentifier(cleaned);
+                        setIdentifier(e.target.value.toLowerCase());
                         if (errorMessage) setErrorMessage('');
                       }}
                       placeholder="Email or Phone Number"

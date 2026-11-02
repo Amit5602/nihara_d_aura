@@ -66,9 +66,7 @@ export default function Register() {
   };
 
   const handleIdentifierChange = (e) => {
-    const val = e.target.value;
-    // Auto convert to lowercase if letters/email are typed
-    const cleaned = val.includes('@') || /[A-Z]/.test(val) ? val.toLowerCase() : val;
+    const cleaned = e.target.value.toLowerCase();
     setFormData((prev) => ({ ...prev, identifier: cleaned }));
     if (errorMessage) setErrorMessage('');
     if (fieldErrors.identifier) setFieldErrors((prev) => ({ ...prev, identifier: false }));
@@ -96,16 +94,19 @@ export default function Register() {
     setIsSubmitting(true);
 
     const cleanName = formData.name.trim();
-    const cleanIdentifier = formData.identifier.trim().toLowerCase();
+    const cleanIdentifier = formData.identifier.trim().includes('@')
+      ? formData.identifier.trim().toLowerCase()
+      : formData.identifier.trim().replace(/\D/g, '');
 
     try {
       const res = await api.register(cleanName, cleanIdentifier);
       setIsSubmitting(false);
 
       if (res && res.success) {
+        localStorage.setItem('pending_signup_name', cleanName);
         localStorage.setItem('pending_email', cleanIdentifier);
         showToast(res.message || `Verification OTP sent to ${cleanIdentifier}!`, 'success');
-        navigate('/verify-otp');
+        navigate('/verify-otp?flow=register');
       } else {
         setErrorMessage(res?.message || 'Registration failed. Please check your details and try again.');
       }

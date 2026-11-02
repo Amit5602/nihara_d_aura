@@ -312,12 +312,16 @@ export const api = {
   },
 
   // Auth & Real OTP API
-  async register(fullName, email) {
+  async register(fullName, identifier) {
     try {
+      const cleanIdentifier = identifier.trim().toLowerCase();
+      const body = cleanIdentifier.includes('@')
+        ? { fullName, email: cleanIdentifier }
+        : { fullName, phone: cleanIdentifier.replace(/\D/g, '') };
       const res = await fetch(`${API_BASE}/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ fullName, email })
+        body: JSON.stringify(body)
       });
       const result = await res.json();
       if (result && typeof result === 'object' && typeof result.success !== 'boolean') {
@@ -329,12 +333,16 @@ export const api = {
     }
   },
 
-  async login(email, password = '', role = 'user') {
+  async login(identifier, password = '', role = 'user') {
     try {
+      const cleanIdentifier = identifier.trim().toLowerCase();
+      const body = role === 'admin' || cleanIdentifier.includes('@')
+        ? { email: cleanIdentifier, password, role }
+        : { phone: cleanIdentifier.replace(/\D/g, ''), password, role };
       const res = await fetch(`${API_BASE}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password, role })
+        body: JSON.stringify(body)
       });
       const result = await res.json();
       if (result && typeof result === 'object' && typeof result.success !== 'boolean') {

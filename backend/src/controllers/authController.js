@@ -12,6 +12,14 @@ const generate6DigitOtp = () => {
   return Math.floor(100000 + Math.random() * 900000).toString();
 };
 
+const normalizePhone = (value) => String(value || '').replace(/\D/g, '');
+
+const findUserByPhone = (phone) => {
+  const formattedDigits = phone.split('').join('[\\s().-]*');
+  const phonePattern = new RegExp(`^(?:\\+?91[\\s().-]*)?${formattedDigits}$`);
+  return User.findOne({ phone: phonePattern });
+};
+
 const credentialsMatch = (provided, configured) => {
   if (!provided || !configured) return false;
   const providedBuffer = Buffer.from(provided);
@@ -33,7 +41,7 @@ const signToken = (user) => jwt.sign(
  */
 export const login = async (req, res, next) => {
   try {
-    const { email, password, role } = req.body || {};
+    const { email, phone, password, role } = req.body || {};
     const cleanEmail = (email || '').trim().toLowerCase();
 
     if (role === 'admin') {
@@ -68,6 +76,19 @@ export const login = async (req, res, next) => {
       return errorResponse(res, 'Use the administrator sign-in form for this email address', 403);
     }
 
+    if (!cleanEmail && phone) {
+      const cleanPhone = normalizePhone(phone);
+      if (!/^[6-9]\d{9}$/.test(cleanPhone)) {
+        return errorResponse(res, 'Please enter a valid 10-digit mobile number.', 400);
+      }
+
+      const existingPhoneUser = await findUserByPhone(cleanPhone);
+      if (!existingPhoneUser) {
+        return errorResponse(res, 'No account exists for this mobile number. Please sign up first.', 404);
+      }
+      return errorResponse(res, 'Phone OTP sign-in is not configured yet. Please sign in with your email.', 503);
+    }
+
     // Standard Email format validation
     const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
     if (!cleanEmail || !emailRegex.test(cleanEmail)) {
@@ -76,6 +97,9 @@ export const login = async (req, res, next) => {
 
     // Check if user exists (optional info)
     const existingUser = await User.findOne({ email: cleanEmail });
+    if (!existingUser) {
+      return errorResponse(res, 'No account exists for this email. Please sign up first.', 404);
+    }
     if (existingUser?.role === 'admin') {
       return errorResponse(res, 'Admin accounts must use the configured administrator sign-in', 403);
     }
@@ -119,6 +143,8 @@ export const register = async (req, res, next) => {
     const rawName = fullName || name || '';
     const cleanName = rawName.trim();
     const cleanEmail = (email || '').trim().toLowerCase();
+    const cleanPhone = normalizePhone(phone);
+    const isPhoneSignup = !cleanEmail && Boolean(phone);
 
     // Name validation: only alphabets and spaces, min 2 chars
     const nameRegex = /^[a-zA-Z\s'.]{2,50}$/;
@@ -126,16 +152,27 @@ export const register = async (req, res, next) => {
       return errorResponse(res, 'Name must only contain alphabetic letters and spaces (minimum 2 characters).', 400);
     }
 
-    // Email validation: standard email format
-    const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
-    if (!cleanEmail || !emailRegex.test(cleanEmail)) {
-      return errorResponse(res, 'Please provide a valid standard email address in lowercase (e.g. name@domain.com).', 400);
+    if (isPhoneSignup) {
+      if (!/^[6-9]\d{9}$/.test(cleanPhone)) {
+        return errorResponse(res, 'Please provide a valid 10-digit mobile number.', 400);
+      }
+    } else {
+      const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+      if (!cleanEmail || !emailRegex.test(cleanEmail)) {
+        return errorResponse(res, 'Please provide a valid email address.', 400);
+      }
     }
 
-    // Check if account already exists
-    const existing = await User.findOne({ email: cleanEmail });
+    const existing = isPhoneSignup
+      ? await findUserByPhone(cleanPhone)
+      : await User.findOne({ email: cleanEmail });
     if (existing) {
-      return errorResponse(res, 'An account with this email already exists. Please login instead.', 400);
+      const identifier = isPhoneSignup ? 'mobile number' : 'email';
+      return errorResponse(res, `An account with this ${identifier} already exists. Please log in instead.`, 409);
+    }
+
+    if (isPhoneSignup) {
+      return errorResponse(res, 'Phone OTP verification is not configured yet. Please sign up with your email for now.', 503);
     }
 
     // Generate real 6-digit OTP
@@ -200,6 +237,9 @@ export const verifyOtp = async (req, res, next) => {
 
     // If user does not exist (Registration flow), create user record in MongoDB
     if (!user) {
+      if (storedOtp.purpose !== 'register') {
+        return errorResponse(res, 'No account exists for this email. Please sign up first.', 404);
+      }
       const savedName = storedOtp?.fullName || cleanEmail.split('@')[0] || 'Royal Patron';
       user = await User.create({
         id: `usr_${Date.now()}`,

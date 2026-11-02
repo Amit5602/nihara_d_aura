@@ -8,6 +8,7 @@ import Logo from '../components/common/Logo';
 export default function VerifyOTP() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
+  const isRegistration = searchParams.get('flow') === 'register';
   const { login } = useAuth();
   const { showToast } = useToast();
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
@@ -98,6 +99,7 @@ export default function VerifyOTP() {
         }
 
         localStorage.removeItem('pending_email');
+        localStorage.removeItem('pending_signup_name');
         showToast(`Welcome to Nihara D'Aura, ${verifiedUser.name}!`, 'success');
 
         // Redirect to admin dashboard if email is amitkry5602@gmail.com
@@ -129,7 +131,9 @@ export default function VerifyOTP() {
     setErrorMessage('');
 
     try {
-      const res = await api.login(email);
+      const res = isRegistration
+        ? await api.register(localStorage.getItem('pending_signup_name') || '', email)
+        : await api.login(email);
       if (res && res.success) {
         showToast(`New OTP sent to ${email}`, 'success');
       } else {
