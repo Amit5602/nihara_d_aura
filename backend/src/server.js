@@ -10,7 +10,7 @@ import { initSocket } from './socket.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const allowedOrigins = (process.env.CORS_ORIGINS || 'http://localhost:5173,http://127.0.0.1:5173')
+const allowedOrigins = (process.env.CORS_ORIGINS || 'http://localhost:5173,http://127.0.0.1:5173,https://niharadaura.com,https://www.niharadaura.com')
   .split(',')
   .map((origin) => origin.trim());
 

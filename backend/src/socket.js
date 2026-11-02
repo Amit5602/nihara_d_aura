@@ -6,7 +6,7 @@ let io = null;
 export const initSocket = (server) => {
   io = new Server(server, {
     cors: {
-      origin: (process.env.CORS_ORIGINS || 'http://localhost:5173,http://127.0.0.1:5173').split(',').map((value) => value.trim()),
+      origin: (process.env.CORS_ORIGINS || 'http://localhost:5173,http://127.0.0.1:5173,https://niharadaura.com,https://www.niharadaura.com').split(',').map((value) => value.trim()),
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE']
     }
   });

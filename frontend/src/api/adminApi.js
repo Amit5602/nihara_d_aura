@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api';
+import { API_BASE_URL } from '../config/api.js';
 
 async function request(path, options = {}) {
   let session;
@@ -11,7 +11,7 @@ async function request(path, options = {}) {
     throw new Error('Please sign in with an administrator account');
   }
 
-  const response = await fetch(`${API_BASE}/admin${path}`, {
+  const response = await fetch(`${API_BASE_URL}/admin${path}`, {
     ...options,
     headers: {
       'Content-Type': 'application/json',

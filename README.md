@@ -150,6 +150,7 @@ Before starting the backend, configure `backend/.env` with:
 - `ADMIN_EMAIL` and `ADMIN_PASSWORD` for the administrator sign-in (keep these private and out of Git)
 - `CORS_ORIGINS` listing the exact frontend origins, comma-separated
 - `PORT=3000` to match the local frontend API/socket defaults, or set `VITE_API_BASE_URL` (include `/api`) and `VITE_SOCKET_URL` to match another port
+- In Vercel, set `VITE_API_BASE_URL=https://api.niharadaura.com/api` for the frontend project and redeploy after changing it. If the storefront uses a different domain, add that exact origin to the backend `CORS_ORIGINS`.
 
 Only the email configured in `ADMIN_EMAIL` can authenticate as an administrator; admin sign-in also requires the matching private `ADMIN_PASSWORD`. Admin tokens for other email addresses are rejected by protected APIs and the admin Socket.IO room. The values in `.env.example` are placeholders.
 

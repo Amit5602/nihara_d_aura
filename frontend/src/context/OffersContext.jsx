@@ -1,18 +1,17 @@
 import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
 import adminApi from '../api/adminApi';
+import { API_BASE_URL } from '../config/api.js';
 import { useSocket } from './SocketContext';
 import { useToast } from './ToastContext';
 
 const OffersContext = createContext();
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api';
-
 export function OffersProvider({ children }) {
   const [offers, setOffers] = useState([]);
   const { socket } = useSocket();
   const { showToast } = useToast();
 
   const fetchOffers = useCallback(async () => {
-    const response = await fetch(`${API_BASE}/offers`);
+    const response = await fetch(`${API_BASE_URL}/offers`);
     let data;
     try {
       data = await response.json();

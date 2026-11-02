@@ -1,6 +1,12 @@
 import { mockData } from './mockData.js';
+import { API_BASE_URL } from '../config/api.js';
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api';
+const authRequestError = (error) => ({
+  success: false,
+  message: error instanceof TypeError
+    ? `Unable to reach the authentication server at ${API_BASE_URL}. Check the API URL, server availability, and CORS settings.`
+    : error.message || 'Authentication request failed. Please try again.'
+});
 
 const getAuthHeaders = () => {
   try {
@@ -23,7 +29,7 @@ async function request(endpoint, options = {}, useFallback = true) {
   try {
     const authHeaders = getAuthHeaders();
     delete authHeaders['x-user-role'];
-    const res = await fetch(`${API_BASE}${endpoint}`, {
+    const res = await fetch(`${API_BASE_URL}${endpoint}`, {
       headers: {
         'Content-Type': 'application/json',
         ...authHeaders,
@@ -259,7 +265,7 @@ export const api = {
 
   async getCurrentUser() {
     const stored = JSON.parse(localStorage.getItem('nihara_auth') || 'null');
-    const response = await fetch(`${API_BASE}/auth/me`, {
+    const response = await fetch(`${API_BASE_URL}/auth/me`, {
       headers: stored?.token ? { Authorization: `Bearer ${stored.token}` } : {}
     });
     const result = await response.json();
@@ -336,18 +342,22 @@ export const api = {
       const body = cleanIdentifier.includes('@')
         ? { fullName, email: cleanIdentifier }
         : { fullName, phone: cleanIdentifier.replace(/\D/g, '') };
-      const res = await fetch(`${API_BASE}/auth/register`, {
+      const res = await fetch(`${API_BASE_URL}/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)
       });
       const result = await res.json();
-      if (result && typeof result === 'object' && typeof result.success !== 'boolean') {
-        return { ...result, success: res.ok };
+      if (!result || typeof result !== 'object') {
+        return { success: false, message: 'Authentication server returned an invalid response.' };
       }
-      return result;
+      return {
+        ...result,
+        message: result.message || result.error,
+        success: typeof result.success === 'boolean' ? result.success : res.ok
+      };
     } catch (err) {
-      return { success: false, message: err.message };
+      return authRequestError(err);
     }
   },
 
@@ -357,35 +367,43 @@ export const api = {
       const body = role === 'admin' || cleanIdentifier.includes('@')
         ? { email: cleanIdentifier, password, role }
         : { phone: cleanIdentifier.replace(/\D/g, ''), password, role };
-      const res = await fetch(`${API_BASE}/auth/login`, {
+      const res = await fetch(`${API_BASE_URL}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)
       });
       const result = await res.json();
-      if (result && typeof result === 'object' && typeof result.success !== 'boolean') {
-        return { ...result, success: res.ok };
+      if (!result || typeof result !== 'object') {
+        return { success: false, message: 'Authentication server returned an invalid response.' };
       }
-      return result;
+      return {
+        ...result,
+        message: result.message || result.error,
+        success: typeof result.success === 'boolean' ? result.success : res.ok
+      };
     } catch (err) {
-      return { success: false, message: err.message };
+      return authRequestError(err);
     }
   },
 
   async verifyOtp(email, otp) {
     try {
-      const res = await fetch(`${API_BASE}/auth/verify-otp`, {
+      const res = await fetch(`${API_BASE_URL}/auth/verify-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, otp })
       });
       const result = await res.json();
-      if (result && typeof result === 'object' && typeof result.success !== 'boolean') {
-        return { ...result, success: res.ok };
+      if (!result || typeof result !== 'object') {
+        return { success: false, message: 'Authentication server returned an invalid response.' };
       }
-      return result;
+      return {
+        ...result,
+        message: result.message || result.error,
+        success: typeof result.success === 'boolean' ? result.success : res.ok
+      };
     } catch (err) {
-      return { success: false, message: err.message };
+      return authRequestError(err);
     }
   }
 };

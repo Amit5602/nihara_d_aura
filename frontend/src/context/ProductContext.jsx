@@ -1,9 +1,9 @@
 import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
 import { api } from '../services/api';
 import { useSocket } from './SocketContext';
+import { API_BASE_URL } from '../config/api.js';
 
 const ProductContext = createContext();
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api';
 
 const getAuthHeaders = () => {
   try {
@@ -137,7 +137,7 @@ export function ProductProvider({ children }) {
     }
 
     try {
-      const res = await fetch(`${API_BASE}/products`, {
+      const res = await fetch(`${API_BASE_URL}/products`, {
         method: 'POST',
         headers: getAuthHeaders(),
         body: JSON.stringify(productData)
@@ -161,7 +161,7 @@ export function ProductProvider({ children }) {
 
   const updateProduct = useCallback(async (id, updateData) => {
     try {
-      const res = await fetch(`${API_BASE}/products/${id}`, {
+      const res = await fetch(`${API_BASE_URL}/products/${id}`, {
         method: 'PUT',
         headers: getAuthHeaders(),
         body: JSON.stringify(updateData)
@@ -185,7 +185,7 @@ export function ProductProvider({ children }) {
 
   const deleteProduct = useCallback(async (id) => {
     try {
-      const res = await fetch(`${API_BASE}/products/${id}`, {
+      const res = await fetch(`${API_BASE_URL}/products/${id}`, {
         method: 'DELETE',
         headers: getAuthHeaders()
       });
