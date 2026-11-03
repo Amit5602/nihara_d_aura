@@ -40,12 +40,15 @@ const getPopulatedCart = async (cart) => {
   };
 };
 
+const getOrCreateCart = async (userId) => {
+  let cart = await Cart.findOne({ userId });
+  if (!cart) cart = await Cart.create({ userId, items: [], coupon: null });
+  return cart;
+};
+
 export const getCart = async (req, res, next) => {
   try {
-    let cart = await Cart.findOne();
-    if (!cart) {
-      cart = await Cart.create({ items: [], coupon: null });
-    }
+    const cart = await getOrCreateCart(req.userId);
     const populated = await getPopulatedCart(cart);
     return successResponse(res, populated);
   } catch (err) {
@@ -56,8 +59,10 @@ export const getCart = async (req, res, next) => {
 export const addToCart = async (req, res, next) => {
   try {
     const { productId, quantity = 1, variant = 'Standard', size = 'Standard' } = req.body;
-    let cart = await Cart.findOne();
-    if (!cart) cart = await Cart.create({ items: [], coupon: null });
+    if (typeof productId !== 'string' || !productId.trim() || !Number.isInteger(Number(quantity)) || Number(quantity) < 1) {
+      return errorResponse(res, 'A valid product and quantity are required', 400);
+    }
+    const cart = await getOrCreateCart(req.userId);
 
     const existingIdx = cart.items.findIndex(
       i => i.productId === productId && i.variant === variant && i.size === size
@@ -77,17 +82,51 @@ export const addToCart = async (req, res, next) => {
   }
 };
 
+export const replaceCart = async (req, res, next) => {
+  try {
+    if (!Array.isArray(req.body.items)) {
+      return errorResponse(res, 'Cart items must be provided as an array', 400);
+    }
+
+    const items = [];
+    for (const item of req.body.items) {
+      const productId = item?.productId || item?.product?.id || item?.product?._id;
+      const quantity = Number(item?.quantity);
+      if (typeof productId !== 'string' || !productId.trim() || !Number.isInteger(quantity) || quantity < 1) {
+        return errorResponse(res, 'Each cart item must have a valid product and quantity', 400);
+      }
+      items.push({
+        productId: productId.trim(),
+        quantity,
+        variant: item.variant || 'Standard',
+        size: item.size || 'Standard'
+      });
+    }
+
+    const cart = await getOrCreateCart(req.userId);
+    cart.items = items;
+    await cart.save();
+    return successResponse(res, await getPopulatedCart(cart));
+  } catch (err) {
+    next(err);
+  }
+};
+
 export const updateCartItem = async (req, res, next) => {
   try {
-    const { quantity, variant } = req.body;
+    const { quantity, variant, size } = req.body;
     const { productId } = req.params;
-    let cart = await Cart.findOne();
+    const cart = await Cart.findOne({ userId: req.userId });
     if (!cart) return errorResponse(res, 'Cart not found', 404);
 
-    const item = cart.items.find(i => i.productId === productId && (!variant || i.variant === variant));
+    const matchesItem = (item) =>
+      item.productId === productId &&
+      (!variant || item.variant === variant) &&
+      (!size || item.size === size);
+    const item = cart.items.find(matchesItem);
     if (item) {
       if (quantity <= 0) {
-        cart.items = cart.items.filter(i => !(i.productId === productId && (!variant || i.variant === variant)));
+        cart.items = cart.items.filter(i => !matchesItem(i));
       } else {
         item.quantity = Number(quantity);
       }
@@ -103,12 +142,16 @@ export const updateCartItem = async (req, res, next) => {
 
 export const removeCartItem = async (req, res, next) => {
   try {
-    const { variant } = req.query;
+    const { variant, size } = req.query;
     const { productId } = req.params;
-    let cart = await Cart.findOne();
+    const cart = await Cart.findOne({ userId: req.userId });
     if (!cart) return errorResponse(res, 'Cart not found', 404);
 
-    cart.items = cart.items.filter(i => !(i.productId === productId && (!variant || i.variant === variant)));
+    cart.items = cart.items.filter(i => !(
+      i.productId === productId &&
+      (!variant || i.variant === variant) &&
+      (!size || i.size === size)
+    ));
     await cart.save();
 
     const populated = await getPopulatedCart(cart);
@@ -128,8 +171,7 @@ export const applyCoupon = async (req, res, next) => {
       return errorResponse(res, 'Invalid or expired coupon code. Try NIHARA10 or GLOW20', 400);
     }
 
-    let cart = await Cart.findOne();
-    if (!cart) cart = await Cart.create({ items: [], coupon: null });
+    const cart = await getOrCreateCart(req.userId);
 
     cart.coupon = {
       code: offer.code,
@@ -145,7 +187,7 @@ export const applyCoupon = async (req, res, next) => {
 
 export const removeCoupon = async (req, res, next) => {
   try {
-    let cart = await Cart.findOne();
+    let cart = await Cart.findOne({ userId: req.userId });
     if (cart) {
       cart.coupon = null;
       await cart.save();

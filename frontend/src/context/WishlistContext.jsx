@@ -1,9 +1,11 @@
 import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
 import { api } from '../services/api';
+import { useAuth } from './AuthContext';
 
 const WishlistContext = createContext();
 
 export function WishlistProvider({ children }) {
+  const { token } = useAuth();
   const [wishlistIds, setWishlistIds] = useState(() => {
     try {
       const saved = localStorage.getItem('nihara_wishlist');
@@ -15,6 +17,7 @@ export function WishlistProvider({ children }) {
 
   // Sync with server wishlist on mount
   useEffect(() => {
+    if (!token) return undefined;
     let isMounted = true;
     api.getWishlist().then(res => {
       if (isMounted && res && res.wishlist) {
@@ -33,7 +36,7 @@ export function WishlistProvider({ children }) {
       console.warn('Could not sync wishlist with server:', err.message);
     });
     return () => { isMounted = false; };
-  }, []);
+  }, [token]);
 
   const toggleWishlist = useCallback(async (productId) => {
     setWishlistIds(prev => {
@@ -46,12 +49,14 @@ export function WishlistProvider({ children }) {
       return next;
     });
 
-    try {
-      await api.toggleWishlistOnServer(productId);
-    } catch (err) {
-      console.warn('Server wishlist toggle error:', err.message);
+    if (token) {
+      try {
+        await api.toggleWishlistOnServer(productId);
+      } catch (err) {
+        console.warn('Server wishlist toggle error:', err.message);
+      }
     }
-  }, []);
+  }, [token]);
 
   const isInWishlist = useCallback((productId) => {
     return wishlistIds.includes(productId);
@@ -66,12 +71,14 @@ export function WishlistProvider({ children }) {
       return next;
     });
 
-    try {
-      await api.toggleWishlistOnServer(productId);
-    } catch (err) {
-      console.warn('Server wishlist remove error:', err.message);
+    if (token) {
+      try {
+        await api.toggleWishlistOnServer(productId);
+      } catch (err) {
+        console.warn('Server wishlist remove error:', err.message);
+      }
     }
-  }, []);
+  }, [token]);
 
   const value = useMemo(() => ({
     wishlistIds,

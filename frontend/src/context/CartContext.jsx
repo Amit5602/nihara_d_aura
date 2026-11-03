@@ -1,11 +1,13 @@
-import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { useOffers } from './OffersContext';
+import { useAuth } from './AuthContext';
 import { api } from '../services/api';
 
 const CartContext = createContext();
 
 export function CartProvider({ children }) {
   const { offers, validateCoupon } = useOffers();
+  const { token } = useAuth();
 
   // Load saved cart from localStorage or start with empty bag
   const [items, setItems] = useState(() => {
@@ -20,6 +22,10 @@ export function CartProvider({ children }) {
     }
     return [];
   });
+  const itemsRef = useRef(items);
+  useEffect(() => {
+    itemsRef.current = items;
+  }, [items]);
 
   const [couponCode, setCouponCode] = useState(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -28,20 +34,49 @@ export function CartProvider({ children }) {
   const saveCart = useCallback((cartItems) => {
     try {
       localStorage.setItem('nihara_cart', JSON.stringify(cartItems));
-      api.updateCartOnServer(cartItems).catch(() => {});
     } catch (e) {
       console.warn('Failed to save cart to localStorage:', e);
     }
-  }, []);
+    if (token) {
+      api.updateCartOnServer(cartItems).catch((error) => {
+        console.error('Failed to sync cart with the server:', error.message);
+      });
+    }
+  }, [token]);
 
-  // Fetch live server cart on mount if available
+  // Sync the signed-in user's cart; guests keep their cart locally.
   useEffect(() => {
+    if (!token) return undefined;
+    let active = true;
     api.getCart().then(res => {
-      if (res && Array.isArray(res.items) && res.items.length > 0) {
-        setItems(prev => prev.length === 0 ? res.items : prev);
+      if (!active || !Array.isArray(res.items)) return;
+      const mergedItems = [...res.items];
+      for (const localItem of itemsRef.current) {
+        const existing = mergedItems.find((item) =>
+          item.productId === localItem.productId &&
+          item.variant === localItem.variant &&
+          item.size === localItem.size
+        );
+        if (existing) {
+          existing.quantity = Math.max(existing.quantity, localItem.quantity);
+        } else {
+          mergedItems.push(localItem);
+        }
       }
-    }).catch(() => {});
-  }, []);
+      setItems(mergedItems);
+      try {
+        localStorage.setItem('nihara_cart', JSON.stringify(mergedItems));
+      } catch (error) {
+        console.warn('Failed to save the server cart locally:', error);
+      }
+      api.updateCartOnServer(mergedItems).catch((error) => {
+        console.error('Failed to sync the local cart with the server:', error.message);
+      });
+    }).catch((error) => {
+      console.error('Failed to load the signed-in cart:', error.message);
+    });
+    return () => { active = false; };
+  }, [token]);
 
   // Calculations
   const subtotal = useMemo(() => {
@@ -77,7 +112,7 @@ export function CartProvider({ children }) {
 
   const addToCart = useCallback((product, quantity = 1, variant = 'Standard', size = 'Standard') => {
     setItems(prev => {
-      const idx = prev.findIndex(i => i.productId === product.id && i.variant === variant);
+      const idx = prev.findIndex(i => i.productId === product.id && i.variant === variant && i.size === size);
       let next;
       if (idx > -1) {
         next = [...prev];
@@ -90,10 +125,14 @@ export function CartProvider({ children }) {
     });
   }, [saveCart]);
 
-  const updateQuantity = useCallback((productId, variant, delta) => {
+  const updateQuantity = useCallback((productId, variant, size, delta) => {
     setItems(prev => {
       const next = prev.map(item => {
-        if (item.productId === productId && (variant ? item.variant === variant : true)) {
+        if (
+          item.productId === productId &&
+          (variant ? item.variant === variant : true) &&
+          (size ? item.size === size : true)
+        ) {
           const newQty = item.quantity + delta;
           return newQty > 0 ? { ...item, quantity: newQty } : null;
         }
@@ -104,9 +143,13 @@ export function CartProvider({ children }) {
     });
   }, [saveCart]);
 
-  const removeFromCart = useCallback((productId, variant) => {
+  const removeFromCart = useCallback((productId, variant, size) => {
     setItems(prev => {
-      const next = prev.filter(i => !(i.productId === productId && (variant ? i.variant === variant : true)));
+      const next = prev.filter(i => !(
+        i.productId === productId &&
+        (variant ? i.variant === variant : true) &&
+        (size ? i.size === size : true)
+      ));
       saveCart(next);
       return next;
     });
@@ -127,8 +170,9 @@ export function CartProvider({ children }) {
 
   const clearCart = useCallback(() => {
     setItems([]);
+    saveCart([]);
     setCouponCode(null);
-  }, [setCouponCode]);
+  }, [saveCart]);
 
   const contextValue = useMemo(() => ({
     items,

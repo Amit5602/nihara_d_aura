@@ -164,16 +164,16 @@ export const api = {
 
   // Cart
   async getCart() {
-    const serverRes = await request('/cart');
-    if (serverRes) return serverRes;
-    return { success: true, items: [], subtotal: 0, totalAmount: 0, deliveryFee: 0 };
+    const serverRes = await request('/cart', {}, false);
+    if (serverRes && Array.isArray(serverRes.items)) return serverRes;
+    throw new Error(serverRes?.message || 'Could not load your cart.');
   },
 
   async updateCartOnServer(items) {
     return await request('/cart', {
-      method: 'POST',
+      method: 'PUT',
       body: JSON.stringify({ items })
-    });
+    }, false);
   },
 
   // Wishlist

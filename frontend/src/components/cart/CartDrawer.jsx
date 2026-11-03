@@ -117,7 +117,7 @@ export default function CartDrawer() {
                           {item.product?.name}
                         </h4>
                         <button
-                          onClick={() => removeFromCart(item.productId, item.variant)}
+                          onClick={() => removeFromCart(item.productId, item.variant, item.size)}
                           className="text-stone-300 hover:text-red-500 transition-colors p-0.5"
                         >
                           <X className="w-3.5 h-3.5" />
@@ -136,14 +136,14 @@ export default function CartDrawer() {
                       {/* Quantity Controller */}
                       <div className="flex items-center border border-[#DFBC77]/50 rounded-lg overflow-hidden bg-[#FCF9F2]">
                         <button
-                          onClick={() => updateQuantity(item.productId, item.variant, -1)}
+                          onClick={() => updateQuantity(item.productId, item.variant, item.size, -1)}
                           className="px-2 py-0.5 text-xs text-[#855F14] hover:bg-[#EAD7AD] transition-colors"
                         >
                           -
                         </button>
                         <span className="px-2 text-xs font-bold text-[#1C1917]">{item.quantity}</span>
                         <button
-                          onClick={() => updateQuantity(item.productId, item.variant, 1)}
+                          onClick={() => updateQuantity(item.productId, item.variant, item.size, 1)}
                           className="px-2 py-0.5 text-xs text-[#855F14] hover:bg-[#EAD7AD] transition-colors"
                         >
                           +

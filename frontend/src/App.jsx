@@ -70,6 +70,18 @@ function ProtectedAdminRoute({ children }) {
   return children;
 }
 
+function ProtectedCustomerRoute({ children }) {
+  const { isAuthenticated } = useAuth();
+  const location = useLocation();
+
+  if (!isAuthenticated) {
+    const redirect = `${location.pathname}${location.search}`;
+    return <Navigate to={`/login?redirect=${encodeURIComponent(redirect)}`} replace />;
+  }
+
+  return children;
+}
+
 function AppLayout() {
   const location = useLocation();
   const isAdmin = location.pathname.startsWith('/admin');
@@ -128,13 +140,13 @@ function AppLayout() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/wishlist" element={<Wishlist />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/profile/edit" element={<Profile />} />
-            <Route path="/orders" element={<Orders />} />
-            <Route path="/orders/:id" element={<Orders />} />
-            <Route path="/bookings" element={<Bookings />} />
-            <Route path="/bookings/:id" element={<Bookings />} />
-            <Route path="/addresses" element={<Addresses />} />
+            <Route path="/profile" element={<ProtectedCustomerRoute><Profile /></ProtectedCustomerRoute>} />
+            <Route path="/profile/edit" element={<ProtectedCustomerRoute><Profile /></ProtectedCustomerRoute>} />
+            <Route path="/orders" element={<ProtectedCustomerRoute><Orders /></ProtectedCustomerRoute>} />
+            <Route path="/orders/:id" element={<ProtectedCustomerRoute><Orders /></ProtectedCustomerRoute>} />
+            <Route path="/bookings" element={<ProtectedCustomerRoute><Bookings /></ProtectedCustomerRoute>} />
+            <Route path="/bookings/:id" element={<ProtectedCustomerRoute><Bookings /></ProtectedCustomerRoute>} />
+            <Route path="/addresses" element={<ProtectedCustomerRoute><Addresses /></ProtectedCustomerRoute>} />
 
             {/* Catch-all redirect */}
             <Route path="*" element={<Navigate to="/" replace />} />

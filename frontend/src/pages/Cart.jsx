@@ -106,14 +106,14 @@ export default function Cart() {
 
                 <div className="flex items-center overflow-hidden rounded-xl border border-stone-200 bg-stone-50">
                   <button
-                    onClick={() => updateQuantity(item.productId, item.variant, -1)}
+                    onClick={() => updateQuantity(item.productId, item.variant, item.size, -1)}
                     className="px-3 py-1.5 text-xs font-bold text-stone-700 transition-colors hover:bg-stone-200"
                   >
                     -
                   </button>
                   <span className="px-3 text-xs font-bold text-stone-900">{item.quantity}</span>
                   <button
-                    onClick={() => updateQuantity(item.productId, item.variant, 1)}
+                    onClick={() => updateQuantity(item.productId, item.variant, item.size, 1)}
                     className="px-3 py-1.5 text-xs font-bold text-stone-700 transition-colors hover:bg-stone-200"
                   >
                     +
@@ -121,7 +121,7 @@ export default function Cart() {
                 </div>
 
                 <button
-                  onClick={() => removeFromCart(item.productId, item.variant)}
+                  onClick={() => removeFromCart(item.productId, item.variant, item.size)}
                   className="rounded-full p-1 text-stone-300 transition-colors hover:text-red-500"
                   title="Remove from bag"
                 >

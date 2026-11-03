@@ -129,7 +129,7 @@ npm install
 # Set your environment variables in .env (reference .env.example)
 npm run dev
 ```
-Backend uses `PORT` from `backend/.env` (default `5000`). The frontend API and socket URLs default to port `3000`, so configure `PORT=3000` locally or point the frontend variables at the backend port.
+Backend and frontend use port `5000` for the local API and Socket.IO server. Set `PORT=5000` in `backend/.env`, and keep `VITE_API_BASE_URL=http://localhost:5000/api` and `VITE_SOCKET_URL=http://localhost:5000` in `frontend/.env`.
 
 #### Step 2: Start Frontend Application
 ```bash
@@ -149,8 +149,8 @@ Before starting the backend, configure `backend/.env` with:
 - `JWT_SECRET` containing a unique random secret of at least 32 characters
 - `ADMIN_EMAIL` and `ADMIN_PASSWORD` for the administrator sign-in (keep these private and out of Git)
 - `CORS_ORIGINS` listing the exact frontend origins, comma-separated
-- `PORT=3000` to match the local frontend API/socket defaults, or set `VITE_API_BASE_URL` (include `/api`) and `VITE_SOCKET_URL` to match another port
-- In Vercel, set `VITE_API_BASE_URL=https://api.niharadaura.com/api` for the frontend project and redeploy after changing it. If the storefront uses a different domain, add that exact origin to the backend `CORS_ORIGINS`.
+- `PORT=5000` to match the local frontend API/socket defaults, or set `VITE_API_BASE_URL` (include `/api`) and `VITE_SOCKET_URL` to match another port
+- In Vercel, set `VITE_API_BASE_URL=https://api.niharadaura.com/api` and `VITE_SOCKET_URL=https://api.niharadaura.com` for the frontend project and redeploy after changing them. Deploy the backend from this repository as well so cart, offer, salon, and Socket.IO routes are available. If the storefront uses a different domain, add that exact origin to the backend `CORS_ORIGINS`.
 
 Only the email configured in `ADMIN_EMAIL` can authenticate as an administrator; admin sign-in also requires the matching private `ADMIN_PASSWORD`. Admin tokens for other email addresses are rejected by protected APIs and the admin Socket.IO room. The values in `.env.example` are placeholders.
 
