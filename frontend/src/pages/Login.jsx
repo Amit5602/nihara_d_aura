@@ -303,7 +303,7 @@ export default function Login() {
                   ? 'STAFF PORTAL ACCESS' 
                   : otpStep === 'enter_otp' 
                     ? 'SECURITY VERIFICATION' 
-                    : 'PURE AYURVEDIC SWEETNESS'}
+                    : 'JEWELLERY • MAKEUP • SALON'}
               </span>
             </div>
           </div>

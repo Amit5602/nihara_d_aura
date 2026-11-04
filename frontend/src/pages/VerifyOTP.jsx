@@ -178,7 +178,7 @@ export default function VerifyOTP() {
           {/* Tagline */}
           <div className="flex justify-center">
             <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-[#DFBC77]/60 bg-[#FAF7F2] text-[#855F14] text-[10.5px] font-semibold tracking-wider uppercase shadow-xs">
-              <span>PURE AYURVEDIC SWEETNESS</span>
+              <span>JEWELLERY • MAKEUP • SALON</span>
             </div>
           </div>
 
