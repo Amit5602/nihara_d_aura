@@ -76,6 +76,26 @@ const seedImageReplacements = {
     source: '/images/products/jewellery_royal_kundan_haar.jpg',
     replacement: ARTIFICIAL_JEWELLERY_IMAGES['Jewellery Sets']
   },
+  prod_kundan_chandbalis: {
+    source: '/images/products/jewellery_kundan_chandbalis.jpg',
+    replacement: '/images/artificial-jewellery/jhumka-stock-closeup.jpg'
+  },
+  prod_gold_locket: {
+    source: '/images/products/jewellery_lakshmi_gold_locket.jpg',
+    replacement: ARTIFICIAL_JEWELLERY_IMAGES.Pendants
+  },
+  prod_ganesha_pendant: {
+    source: '/images/products/jewellery_gold_ganesha_pendant.jpg',
+    replacement: ARTIFICIAL_JEWELLERY_IMAGES.Pendants
+  },
+  prod_evil_eye_pendant: {
+    source: '/images/products/jewellery_evil_eye_pendant.jpg',
+    replacement: ARTIFICIAL_JEWELLERY_IMAGES.Pendants
+  },
+  prod_om_sacred_locket: {
+    source: '/images/products/jewellery_sacred_om_locket.jpg',
+    replacement: ARTIFICIAL_JEWELLERY_IMAGES.Pendants
+  },
   prod_temple_kasu_set: {
     source: '/images/products/jewellery_royal_kundan_haar.jpg',
     replacement: ARTIFICIAL_JEWELLERY_IMAGES['Necklaces & Sets']
@@ -100,26 +120,6 @@ const seedImageReplacements = {
     source: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=85',
     replacement: ARTIFICIAL_JEWELLERY_IMAGES['Bangles & Bracelets']
   },
-  prod_diamond_ring: {
-    source: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=85',
-    replacement: '/images/artificial-jewellery/ring-stock.jpg'
-  },
-  prod_eternity_band: {
-    source: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=85',
-    replacement: ARTIFICIAL_JEWELLERY_IMAGES['Couple Jewellery']
-  },
-  prod_floral_signet_ring: {
-    source: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=85',
-    replacement: ARTIFICIAL_JEWELLERY_IMAGES.Rings
-  },
-  prod_peacock_cocktail_ring: {
-    source: 'https://images.unsplash.com/photo-1603561596112-0a132b757442?auto=format&fit=crop&w=1200&q=85',
-    replacement: '/images/artificial-jewellery/cocktail-ring-stock.jpg'
-  },
-  prod_emerald_gold_ring: {
-    source: 'https://images.unsplash.com/photo-1603561596112-0a132b757442?auto=format&fit=crop&w=1200&q=85',
-    replacement: '/images/artificial-jewellery/ring-detail-stock.jpg'
-  }
 };
 
 const seedImageReplacementsBySlug = {
@@ -154,26 +154,6 @@ const seedImageReplacementsBySlug = {
   'antique-finish-22k-gold-peacock-kada-cuff': {
     source: '/images/products/jewellery_nakshi_temple_kada.jpg',
     replacement: '/images/artificial-jewellery/bangles-stock-black.jpg'
-  },
-  'uncut-polki-diamond-18k-gold-solitaire-ring': {
-    source: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=85',
-    replacement: '/images/artificial-jewellery/ring-stock.jpg'
-  },
-  '18k-rose-gold-eternity-diamond-band': {
-    source: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=85',
-    replacement: ARTIFICIAL_JEWELLERY_IMAGES['Couple Jewellery']
-  },
-  '22k-hand-engraved-floral-gold-signet-ring': {
-    source: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=85',
-    replacement: ARTIFICIAL_JEWELLERY_IMAGES.Rings
-  },
-  '22k-gold-royal-peacock-statement-cocktail-ring': {
-    source: 'https://images.unsplash.com/photo-1603561596112-0a132b757442?auto=format&fit=crop&w=1200&q=85',
-    replacement: '/images/artificial-jewellery/cocktail-ring-stock.jpg'
-  },
-  'heritage-navratna-emerald-22k-gold-ring': {
-    source: 'https://images.unsplash.com/photo-1603561596112-0a132b757442?auto=format&fit=crop&w=1200&q=85',
-    replacement: '/images/artificial-jewellery/ring-detail-stock.jpg'
   },
   '22k-solid-gold-peacock-temple-jhumkas': {
     source: '/images/products/jewellery_temple_gold_jhumkas.jpg',

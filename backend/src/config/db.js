@@ -10,6 +10,20 @@ export const connectDB = async () => {
   });
   console.log(`[Database] MongoDB Live Connected: ${conn.connection.host}`);
   await seedDatabaseIfEmpty();
+  const removedRingProducts = await Product.deleteMany({
+    id: {
+      $in: [
+        'prod_diamond_ring',
+        'prod_peacock_cocktail_ring',
+        'prod_eternity_band',
+        'prod_emerald_gold_ring',
+        'prod_floral_signet_ring'
+      ]
+    }
+  });
+  if (removedRingProducts.deletedCount > 0) {
+    console.log(`[Migration] Removed ${removedRingProducts.deletedCount} ring products from the catalog.`);
+  }
   const imageFix = await Product.updateOne(
     {
       slug: 'warm-spiced-chai-vanilla-aromatherapy-melts',
