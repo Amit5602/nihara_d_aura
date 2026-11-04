@@ -872,6 +872,37 @@ export const initialData = {
       "stock": 6
     },
     {
+      "id": "prod_anti_tarnish_ring",
+      "name": "Everyday Anti-Tarnish Fashion Ring",
+      "slug": "everyday-anti-tarnish-fashion-ring",
+      "category": "Jewellery",
+      "categorySlug": "jewellery",
+      "subcategory": "Rings",
+      "price": 399,
+      "originalPrice": 399,
+      "discountPercent": 0,
+      "rating": 0,
+      "reviewCount": 0,
+      "isFeatured": false,
+      "isBestseller": false,
+      "images": [
+        "/images/artificial-jewellery/rings.jpg"
+      ],
+      "description": "An everyday fashion ring with an anti-tarnish finish. The stock photo is illustrative; the actual design may vary. Keep dry and store separately to help preserve the finish.",
+      "variants": [
+        "Gold-tone finish"
+      ],
+      "sizes": [
+        "Standard size"
+      ],
+      "features": [
+        "Anti-tarnish finish",
+        "Everyday fashion jewellery",
+        "Illustrative stock photo; actual item may differ"
+      ],
+      "stock": 0
+    },
+    {
       "id": "prod_foundation",
       "name": "Glow Velvet Silk Foundation",
       "slug": "glow-velvet-silk-foundation",

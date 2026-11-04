@@ -1,4 +1,4 @@
-// Map of 90 products to 90 completely unique, verified, high-resolution luxury product images
+// Map of current products to unique, verified, high-resolution product images
 export const productImagesMap = {
   // ==========================================
   // JEWELLERY - Rose Gold Chokers (5)
@@ -94,24 +94,8 @@ export const productImagesMap = {
   prod_peacock_temple_cuff: [
     "https://images.pexels.com/photos/1413420/pexels-photo-1413420.jpeg?auto=compress&cs=tinysrgb&w=800"
   ],
-
-  // ==========================================
-  // JEWELLERY - Gold Rings & Bands (5)
-  // ==========================================
-  prod_diamond_ring: [
-    "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=85"
-  ],
-  prod_peacock_cocktail_ring: [
-    "https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?auto=compress&cs=tinysrgb&w=800"
-  ],
-  prod_eternity_band: [
-    "https://images.pexels.com/photos/744563/pexels-photo-744563.jpeg?auto=compress&cs=tinysrgb&w=800"
-  ],
-  prod_emerald_gold_ring: [
-    "https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=800"
-  ],
-  prod_floral_signet_ring: [
-    "https://images.pexels.com/photos/994517/pexels-photo-994517.jpeg?auto=compress&cs=tinysrgb&w=800"
+  prod_anti_tarnish_ring: [
+    "/images/artificial-jewellery/rings.jpg"
   ],
 
   // ==========================================

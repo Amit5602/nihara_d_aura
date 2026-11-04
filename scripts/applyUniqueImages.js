@@ -48,4 +48,4 @@ if (fs.existsSync(liveStorePath)) {
   console.log('Updated backend/src/data/liveStore.json');
 }
 
-console.log('Successfully applied all 90 unique images across all stores!');
+console.log('Successfully applied unique images to all current products!');

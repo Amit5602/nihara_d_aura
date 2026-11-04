@@ -58,7 +58,7 @@ const updatedCategories = [
     itemCount: 30,
     image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1200&q=85",
     description: "BIS 22K/18K Hallmarked gold jhumkas, bridal haar sets, 24K gold lockets & pendants, solitaire rings, and antique gold bangles.",
-    subcategories: ["Gold Earrings & Jhumkas", "Bridal Haar & Sets", "Gold Lockets & Pendants", "Temple Gold Bangles", "Gold Rings & Bands", "Rose Gold Chokers"]
+    subcategories: ["Gold Earrings & Jhumkas", "Bridal Haar & Sets", "Gold Lockets & Pendants", "Temple Gold Bangles", "Gold Rings & Bands", "Rings", "Rose Gold Chokers"]
   },
   {
     id: "cat_nails",

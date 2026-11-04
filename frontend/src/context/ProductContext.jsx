@@ -2,8 +2,13 @@ import React, { createContext, useContext, useState, useEffect, useCallback, use
 import { api } from '../services/api';
 import { useSocket } from './SocketContext';
 import { API_BASE_URL } from '../config/api.js';
+import { REMOVED_JEWELLERY_PRODUCT_IDS } from '../data/jewelleryCategories.js';
 
 const ProductContext = createContext();
+const removedProductIds = new Set(REMOVED_JEWELLERY_PRODUCT_IDS);
+
+const withoutRemovedProducts = (productList) =>
+  productList.filter((product) => !removedProductIds.has(product.id || product._id));
 
 const getAuthHeaders = () => {
   try {
@@ -34,7 +39,13 @@ export function ProductProvider({ children }) {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          const currentProducts = withoutRemovedProducts(parsed);
+          if (currentProducts.length !== parsed.length) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(currentProducts));
+          }
+          return currentProducts;
+        }
       }
     } catch (e) {
       console.warn('Error loading products from localStorage', e);
@@ -58,9 +69,10 @@ export function ProductProvider({ children }) {
     try {
       setLoading(true);
       const res = await api.getProducts();
-      if (res && Array.isArray(res.products) && res.products.length > 0) {
-        setProducts(res.products);
-        saveToStorage(res.products);
+      if (res && Array.isArray(res.products)) {
+        const currentProducts = withoutRemovedProducts(res.products);
+        setProducts(currentProducts);
+        saveToStorage(currentProducts);
       }
     } catch (err) {
       console.warn('[ProductContext] Live MongoDB fetch error:', err.message);
@@ -78,7 +90,7 @@ export function ProductProvider({ children }) {
     if (!socket) return;
 
     const handleProductCreated = (newProd) => {
-      if (!newProd) return;
+      if (!newProd || removedProductIds.has(newProd.id || newProd._id)) return;
       setProducts(prev => {
         const prodId = newProd.id || newProd._id;
         if (prev.some(p => (p.id || p._id) === prodId || p.slug === newProd.slug)) {
@@ -91,7 +103,7 @@ export function ProductProvider({ children }) {
     };
 
     const handleProductUpdated = (updatedProd) => {
-      if (!updatedProd) return;
+      if (!updatedProd || removedProductIds.has(updatedProd.id || updatedProd._id)) return;
       const targetId = updatedProd.id || updatedProd._id;
       setProducts(prev => {
         const next = prev.map(p => {

@@ -2,8 +2,13 @@ import React, { createContext, useContext, useState, useEffect, useCallback, use
 import { useOffers } from './OffersContext';
 import { useAuth } from './AuthContext';
 import { api } from '../services/api';
+import { REMOVED_JEWELLERY_PRODUCT_IDS } from '../data/jewelleryCategories.js';
 
 const CartContext = createContext();
+const removedProductIds = new Set(REMOVED_JEWELLERY_PRODUCT_IDS);
+const isRemovedProduct = (item) => removedProductIds.has(
+  item.productId || item.product?.id || item.product?._id
+);
 
 export function CartProvider({ children }) {
   const { offers, validateCoupon } = useOffers();
@@ -15,7 +20,13 @@ export function CartProvider({ children }) {
       const saved = localStorage.getItem('nihara_cart');
       if (saved) {
         const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed)) return parsed;
+        if (Array.isArray(parsed)) {
+          const currentItems = parsed.filter((item) => !isRemovedProduct(item));
+          if (currentItems.length !== parsed.length) {
+            localStorage.setItem('nihara_cart', JSON.stringify(currentItems));
+          }
+          return currentItems;
+        }
       }
     } catch (e) {
       console.warn('Failed to parse saved cart:', e);
@@ -50,7 +61,7 @@ export function CartProvider({ children }) {
     let active = true;
     api.getCart().then(res => {
       if (!active || !Array.isArray(res.items)) return;
-      const mergedItems = [...res.items];
+      const mergedItems = res.items.filter((item) => !isRemovedProduct(item));
       for (const localItem of itemsRef.current) {
         const existing = mergedItems.find((item) =>
           item.productId === localItem.productId &&

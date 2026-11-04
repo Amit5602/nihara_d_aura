@@ -1,15 +1,22 @@
 import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
 import { api } from '../services/api';
 import { useAuth } from './AuthContext';
+import { REMOVED_JEWELLERY_PRODUCT_IDS } from '../data/jewelleryCategories.js';
 
 const WishlistContext = createContext();
+const removedProductIds = new Set(REMOVED_JEWELLERY_PRODUCT_IDS);
 
 export function WishlistProvider({ children }) {
   const { token } = useAuth();
   const [wishlistIds, setWishlistIds] = useState(() => {
     try {
       const saved = localStorage.getItem('nihara_wishlist');
-      return saved ? JSON.parse(saved) : [];
+      const savedIds = saved ? JSON.parse(saved) : [];
+      const currentIds = savedIds.filter((id) => !removedProductIds.has(id));
+      if (currentIds.length !== savedIds.length) {
+        localStorage.setItem('nihara_wishlist', JSON.stringify(currentIds));
+      }
+      return currentIds;
     } catch {
       return [];
     }
@@ -21,7 +28,9 @@ export function WishlistProvider({ children }) {
     let isMounted = true;
     api.getWishlist().then(res => {
       if (isMounted && res && res.wishlist) {
-        const serverIds = res.wishlist.map(p => p.id || p._id);
+        const serverIds = res.wishlist
+          .map(p => p.id || p._id)
+          .filter((id) => !removedProductIds.has(id));
         if (serverIds.length > 0) {
           setWishlistIds(prev => {
             const merged = Array.from(new Set([...prev, ...serverIds]));

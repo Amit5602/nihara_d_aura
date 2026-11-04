@@ -31,6 +31,14 @@ export const ARTIFICIAL_JEWELLERY_IMAGES = {
   'Gift Boxes': '/images/artificial-jewellery/gift-boxes.jpg'
 };
 
+export const REMOVED_JEWELLERY_PRODUCT_IDS = [
+  'prod_diamond_ring',
+  'prod_peacock_cocktail_ring',
+  'prod_eternity_band',
+  'prod_emerald_gold_ring',
+  'prod_floral_signet_ring'
+];
+
 const seedImageReplacements = {
   prod_choker: {
     source: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1200&q=85',
