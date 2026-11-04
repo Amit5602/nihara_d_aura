@@ -1,5 +1,0 @@
-{
-  "watch": ["src/"],
-  "ignore": ["src/data/liveStore.json", "src/data/*", "node_modules/"],
-  "ext": "js,json"
-}

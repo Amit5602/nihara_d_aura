@@ -1,0 +1,85 @@
+[
+  {
+    "_id": "6ace1ee8bac99793e66c0c72",
+    "name": "Royal Bridal Glow & Makeup Package",
+    "slug": "royal-bridal-glow-makeup-package",
+    "category": "Makeup",
+    "price": 18500,
+    "durationMinutes": 180,
+    "rating": 5,
+    "reviewCount": 310,
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e",
+    "description": "Comprehensive royal bridal package including HD Airbrush makeup, luxury hair setting, floral styling, saree draping, and complimentary pre-ceremony glow facial.",
+    "inclusions": [
+      "High-Definition Airbrush Makeup & Hydration Prep",
+      "Intricate Bridal Hair Artistry & Fresh Floral Setting",
+      "Precision Saree / Dupatta Draping & Jewellery Securing",
+      "Full Bridal Touch-up Kit Included"
+    ],
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.587Z",
+    "updatedAt": "2026-10-13T12:07:04.587Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c73",
+    "name": "Celebrity Glam Party Makeup",
+    "slug": "celebrity-glam-party-makeup",
+    "category": "Makeup",
+    "price": 6500,
+    "durationMinutes": 90,
+    "rating": 4.9,
+    "reviewCount": 195,
+    "image": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f",
+    "description": "Red carpet glam tailored for receptions, sangeets, and galas with sculpted contours, custom false lashes, and radiant glass skin finish.",
+    "inclusions": [
+      "Sculpted Contour Base & Glass Skin Illuminator",
+      "Signature Smokey or Molten Shimmer Eye Design",
+      "Premium Mink Silk Lashes & Application",
+      "Longwear Lipstick Custom Formulation"
+    ],
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.587Z",
+    "updatedAt": "2026-10-13T12:07:04.587Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c74",
+    "name": "Rose Quartz Luxe Gel Nail Extensions",
+    "slug": "rose-quartz-luxe-gel-nail-extensions",
+    "category": "Nails",
+    "price": 3800,
+    "durationMinutes": 120,
+    "rating": 4.9,
+    "reviewCount": 240,
+    "image": "https://images.unsplash.com/photo-1632345031435-8727f6897d53",
+    "description": "Handcrafted acrylic or soft gel extensions with custom nail art, gold foil accents, or French chrome finish.",
+    "inclusions": [
+      "Soft Gel / Hard Gel Extensions with Bespoke Length",
+      "Rose Quartz Marble Art & Real 24K Gold Leaf Accents",
+      "Hydrating Cuticle Therapy & Almond Oil Hand Massage",
+      "Chip-Proof 4-Week High-Gloss Top Coat"
+    ],
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.587Z",
+    "updatedAt": "2026-10-13T12:07:04.587Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c75",
+    "name": "Bridal Jewellery & Styling Consultation",
+    "slug": "bridal-jewellery-styling-consultation",
+    "category": "Jewellery & Styling",
+    "price": 2500,
+    "durationMinutes": 60,
+    "rating": 4.8,
+    "reviewCount": 85,
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908",
+    "description": "One-on-one session with our senior jewellery and styling advisors. Try curated heirloom pieces matched to your wedding trousseau.",
+    "inclusions": [
+      "Virtual or In-Salon Fitting Session at Bandra Flagship",
+      "Neckline & Trousseau Silhouette Harmony Analysis",
+      "Personalized Jewellery & Hair Accessory Moodboard"
+    ],
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.587Z",
+    "updatedAt": "2026-10-13T12:07:04.587Z"
+  }
+]

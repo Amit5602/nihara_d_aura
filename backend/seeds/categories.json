@@ -1,0 +1,72 @@
+[
+  {
+    "_id": "6ace1ee7bac99793e66c0c14",
+    "name": "Makeup Services & Products",
+    "slug": "makeup",
+    "itemCount": 20,
+    "image": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f",
+    "description": "Weightless silk formulations, molten metallics, and bridal perfection crafted for timeless radiance.",
+    "subcategories": [
+      "Face Foundations",
+      "Lipsticks & Gloss",
+      "Eyeshadow Palettes",
+      "Blushes & Highlighters"
+    ],
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:03.928Z",
+    "updatedAt": "2026-10-13T12:07:03.928Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c15",
+    "name": "22K Real Gold & Diamond Jewellery",
+    "slug": "jewellery",
+    "itemCount": 30,
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1200&q=85",
+    "description": "BIS 22K/18K Hallmarked gold jhumkas, bridal haar sets, 24K gold lockets & pendants, solitaire rings, and antique gold bangles.",
+    "subcategories": [
+      "Gold Earrings & Jhumkas",
+      "Bridal Haar & Sets",
+      "Gold Lockets & Pendants",
+      "Temple Gold Bangles",
+      "Gold Rings & Bands",
+      "Rose Gold Chokers"
+    ],
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:03.930Z",
+    "updatedAt": "2026-10-13T12:07:03.930Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c16",
+    "name": "Nail Extensions & Nail Art",
+    "slug": "nails",
+    "itemCount": 20,
+    "image": "https://images.unsplash.com/photo-1632345031435-8727f6897d53",
+    "description": "Salon-grade press-on suites, chrome mirrors, soft gel extensions, and nourishing cuticle elixirs.",
+    "subcategories": [
+      "Press-On Kits",
+      "Gel Lacquer",
+      "Chrome Nail Art",
+      "Cuticle Elixirs"
+    ],
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:03.930Z",
+    "updatedAt": "2026-10-13T12:07:03.930Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c17",
+    "name": "Candles & Home Fragrance",
+    "slug": "candles",
+    "itemCount": 20,
+    "image": "https://images.unsplash.com/photo-1603006905003-be475563bc59",
+    "description": "Hand-poured pure soy wax jars, royal mogra reed diffusers, and botanical room mists.",
+    "subcategories": [
+      "Soy Wax Jar Candles",
+      "Reed Diffusers",
+      "Aroma Room Sprays",
+      "Wax Melts"
+    ],
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:03.931Z",
+    "updatedAt": "2026-10-13T12:07:03.931Z"
+  }
+]

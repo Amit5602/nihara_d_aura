@@ -1,0 +1,3135 @@
+[
+  {
+    "_id": "6ace1ee7bac99793e66c0c18",
+    "name": "Nihara Signature 18K Rose Gold Choker",
+    "slug": "nihara-signature-18k-rose-gold-choker",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Rose Gold Chokers",
+    "price": 24500,
+    "originalPrice": 28000,
+    "discountPercent": 13,
+    "rating": 4.9,
+    "reviewCount": 98,
+    "images": [
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Handcrafted in 18K Rose Gold with luminous uncut polki diamonds, emerald accents, and delicate dangling freshwater seed pearls.",
+    "variants": [
+      "18K Rose Gold",
+      "18K Antique Rose"
+    ],
+    "sizes": [
+      "Adjustable Silk Dori Choker"
+    ],
+    "features": [
+      "18K Certified Rose Gold & Polki Diamonds",
+      "Adjustable royal zari thread closure",
+      "Comes with certificate of authenticity"
+    ],
+    "stock": 7,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.010Z",
+    "updatedAt": "2026-10-13T12:07:04.010Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c19",
+    "name": "Luminary Diamond 18K Rose Gold Tennis Choker",
+    "slug": "luminary-diamond-18k-rose-gold-tennis-choker",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Rose Gold Chokers",
+    "price": 32900,
+    "originalPrice": 38000,
+    "discountPercent": 13,
+    "rating": 5,
+    "reviewCount": 112,
+    "images": [
+      "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "A continuous ribbon of brilliant round diamonds prong-set into gleaming 18K rose gold. Designed for breathtaking bridal elegance.",
+    "variants": [
+      "18K Rose Gold & VVS Diamonds",
+      "18K Dual Rose & White Gold"
+    ],
+    "sizes": [
+      "14 Inch + 2 Inch Extender"
+    ],
+    "features": [
+      "18K BIS Hallmarked Rose Gold (22.5g)",
+      "IGI Certified VVS-VS Conflict-Free Diamonds",
+      "Double safety clasp closure"
+    ],
+    "stock": 6,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.010Z",
+    "updatedAt": "2026-10-13T12:07:04.010Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c1a",
+    "name": "Blooming Flora 18K Rose Gold Layered Choker",
+    "slug": "blooming-flora-18k-rose-gold-layered-choker",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Rose Gold Chokers",
+    "price": 28500,
+    "originalPrice": 33000,
+    "discountPercent": 14,
+    "rating": 4.8,
+    "reviewCount": 76,
+    "images": [
+      "https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Delicate blossoming petals cast in 18K rose gold accented with shimmering zircon crystals and fine filigree lace work.",
+    "variants": [
+      "Petal Rose Gold",
+      "Vintage Matte Rose"
+    ],
+    "sizes": [
+      "Standard Adjustable Choker"
+    ],
+    "features": [
+      "18K Rose Gold Hallmarked",
+      "Handcrafted micro-milgrain detailing",
+      "Luxury velvet presentation box"
+    ],
+    "stock": 9,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.010Z",
+    "updatedAt": "2026-10-13T12:07:04.010Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c1b",
+    "name": "Regal Emerald Drop 18K Rose Gold Collar",
+    "slug": "regal-emerald-drop-18k-rose-gold-collar",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Rose Gold Chokers",
+    "price": 36000,
+    "originalPrice": 42000,
+    "discountPercent": 14,
+    "rating": 4.9,
+    "reviewCount": 89,
+    "images": [
+      "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Opulent 18K rose gold lattice collar studded with Zambian emerald tear-drops and sparkling champagne diamonds.",
+    "variants": [
+      "Zambian Emerald & Rose Gold",
+      "Burmese Ruby & Rose Gold"
+    ],
+    "sizes": [
+      "Standard Fitted Collar"
+    ],
+    "features": [
+      "Natural Zambian Emeralds",
+      "18 Karat Certified Rose Gold",
+      "Includes Certificate of Authenticity"
+    ],
+    "stock": 5,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.010Z",
+    "updatedAt": "2026-10-13T12:07:04.010Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c1c",
+    "name": "Basra Pearl & 18K Rose Gold Cascade Choker",
+    "slug": "basra-pearl-18k-rose-gold-cascade-choker",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Rose Gold Chokers",
+    "price": 26800,
+    "originalPrice": 31000,
+    "discountPercent": 14,
+    "rating": 4.9,
+    "reviewCount": 64,
+    "images": [
+      "https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Multiple tiers of lustrous Basra-inspired natural pearls interwoven with hand-engraved 18K rose gold spacers.",
+    "variants": [
+      "Natural Pearl & Rose Gold",
+      "Golden Pearl & Rose Gold"
+    ],
+    "sizes": [
+      "Triple Row Adjustable Collar"
+    ],
+    "features": [
+      "Graded AAA Natural Freshwater Pearls",
+      "Solid 18K Rose Gold hardware",
+      "Hand-strung with pure silk thread"
+    ],
+    "stock": 8,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.010Z",
+    "updatedAt": "2026-10-13T12:07:04.010Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c1d",
+    "name": "22K Solid Gold Peacock Temple Jhumkas",
+    "slug": "22k-solid-gold-peacock-temple-jhumkas",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Gold Earrings & Jhumkas",
+    "price": 18999,
+    "originalPrice": 22000,
+    "discountPercent": 14,
+    "rating": 4.9,
+    "reviewCount": 142,
+    "images": [
+      "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Intricately carved 22K solid gold temple jhumka earrings featuring divine peacock motifs, ruby cabochons, and gold bead tassels.",
+    "variants": [
+      "Antique Matte Gold",
+      "High Polish 22K Yellow Gold"
+    ],
+    "sizes": [
+      "Standard Pair (14.2g)"
+    ],
+    "features": [
+      "22K Hallmarked Gold Weight: 14.2 Grams",
+      "Anti-tarnish protective gold lacquer coat",
+      "Screw-back secure fitting for heavy wear"
+    ],
+    "stock": 10,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.010Z",
+    "updatedAt": "2026-10-13T12:07:04.010Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c1e",
+    "name": "Royal Jadau Kundan & Pearl Chandbalis",
+    "slug": "royal-jadau-kundan-pearl-chandbalis",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Gold Earrings & Jhumkas",
+    "price": 16500,
+    "originalPrice": 19500,
+    "discountPercent": 15,
+    "rating": 4.9,
+    "reviewCount": 95,
+    "images": [
+      "https://images.pexels.com/photos/1458867/pexels-photo-1458867.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Majestic crescent moon Chandbali earrings set in 22K gold plating with uncut polki kundan, green enamelling, and seed pearl clusters.",
+    "variants": [
+      "Kundan & Emerald Green",
+      "Kundan & Ruby Pink"
+    ],
+    "sizes": [
+      "Medium Statement Pair"
+    ],
+    "features": [
+      "Jaipur Meenakari enamel on reverse",
+      "Hand-strung pearl drops",
+      "Lightweight ergonomic back fitting"
+    ],
+    "stock": 12,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.010Z",
+    "updatedAt": "2026-10-13T12:07:04.010Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c1f",
+    "name": "18K Gold Floral Solitaire Stud Earrings",
+    "slug": "18k-gold-floral-solitaire-stud-earrings",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Gold Earrings & Jhumkas",
+    "price": 14200,
+    "originalPrice": 16500,
+    "discountPercent": 14,
+    "rating": 4.8,
+    "reviewCount": 88,
+    "images": [
+      "https://images.unsplash.com/photo-1588444837495-c6cfeb53f32d?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Classic floral cluster earrings handcrafted in 18K yellow gold with scintillating lab-grown diamond petals.",
+    "variants": [
+      "18K Yellow Gold",
+      "18K Rose Gold"
+    ],
+    "sizes": [
+      "Daily Wear Studs"
+    ],
+    "features": [
+      "18K Hallmarked Gold",
+      "Screw-back secure lock mechanism",
+      "Ideal for daily and festive elegance"
+    ],
+    "stock": 15,
+    "isFeatured": false,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.010Z",
+    "updatedAt": "2026-10-13T12:07:04.010Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c20",
+    "name": "Antique 22K Gold Lakshmi Temple Danglers",
+    "slug": "antique-22k-gold-lakshmi-temple-danglers",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Gold Earrings & Jhumkas",
+    "price": 21000,
+    "originalPrice": 24500,
+    "discountPercent": 14,
+    "rating": 5,
+    "reviewCount": 73,
+    "images": [
+      "https://images.pexels.com/photos/2735970/pexels-photo-2735970.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Divine Goddess Lakshmi motif carved in antique 22K gold with ruby accents and delicate gold bead bells.",
+    "variants": [
+      "Antique Matte 22K Gold"
+    ],
+    "sizes": [
+      "Long Dangler Pair (16g)"
+    ],
+    "features": [
+      "South Indian Temple Nakshi work",
+      "100% 22K BIS Hallmarked",
+      "Certificate of purity included"
+    ],
+    "stock": 7,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.010Z",
+    "updatedAt": "2026-10-13T12:07:04.010Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c21",
+    "name": "Traditional Rajasthani Filigree 22K Gold Jhumkas",
+    "slug": "traditional-rajasthani-filigree-22k-gold-jhumkas",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Gold Earrings & Jhumkas",
+    "price": 19800,
+    "originalPrice": 23000,
+    "discountPercent": 14,
+    "rating": 4.9,
+    "reviewCount": 64,
+    "images": [
+      "https://images.pexels.com/photos/2735981/pexels-photo-2735981.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Finely spun gold filigree dome jhumkas featuring delicate floral wirework and rhythmic dangling gold beads.",
+    "variants": [
+      "22K Yellow Gold"
+    ],
+    "sizes": [
+      "Standard Dome Size"
+    ],
+    "features": [
+      "Handcrafted by Jaipur master artisans",
+      "Ultralight weight hollow dome construction",
+      "BIS 916 Hallmarked Gold"
+    ],
+    "stock": 11,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.010Z",
+    "updatedAt": "2026-10-13T12:07:04.010Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c22",
+    "name": "Royal 22K Gold Kundan Bridal Haar Set",
+    "slug": "royal-22k-gold-kundan-bridal-haar-set",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Bridal Haar & Sets",
+    "price": 38500,
+    "originalPrice": 45000,
+    "discountPercent": 14,
+    "rating": 5,
+    "reviewCount": 168,
+    "images": [
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Grand heritage 22K BIS Hallmarked gold bridal haar adorned with uncut polki diamonds, hand-painted Jaipur meenakari, and ruby drops.",
+    "variants": [
+      "22K Yellow Gold & Ruby",
+      "Rose Gold & Emerald"
+    ],
+    "sizes": [
+      "Complete Haar + Earrings Set"
+    ],
+    "features": [
+      "100% Certified 22K BIS Hallmarked Gold",
+      "Handcrafted by 4th generation Jaipur royal goldsmiths",
+      "Includes velvet heritage chest & certificate of purity"
+    ],
+    "stock": 5,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.010Z",
+    "updatedAt": "2026-10-13T12:07:04.010Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c23",
+    "name": "Heritage 22K Gold & Ruby Bridal Maang Tikka",
+    "slug": "heritage-22k-gold-ruby-bridal-maang-tikka",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Bridal Haar & Sets",
+    "price": 12500,
+    "originalPrice": 14500,
+    "discountPercent": 14,
+    "rating": 4.9,
+    "reviewCount": 88,
+    "images": [
+      "https://images.pexels.com/photos/1454171/pexels-photo-1454171.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Regal forehead adornment with pure 22K solid gold филигранное carving, Burmese ruby drops, and lustrous pearl chains.",
+    "variants": [
+      "22K Yellow Gold & Ruby",
+      "Antique Matte Gold & Emerald"
+    ],
+    "sizes": [
+      "Single Piece Tikka with Hair Hook"
+    ],
+    "features": [
+      "22K Hallmarked Gold Weight: 9.8g",
+      "Lightweight non-pulling hairline hook",
+      "Traditional Kundan setting with back Meenakari"
+    ],
+    "stock": 8,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.010Z",
+    "updatedAt": "2026-10-13T12:07:04.010Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c24",
+    "name": "Mughal Polki & Emerald Grand Bridal Haar Set",
+    "slug": "mughal-polki-emerald-grand-bridal-haar-set",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Bridal Haar & Sets",
+    "price": 54000,
+    "originalPrice": 62000,
+    "discountPercent": 13,
+    "rating": 5,
+    "reviewCount": 145,
+    "images": [
+      "https://images.pexels.com/photos/2849743/pexels-photo-2849743.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Heirloom bridal set with open-setting Polki diamonds, carved Colombian emerald droplets, and matching Chandbali earrings.",
+    "variants": [
+      "Mughal Polki & Emerald"
+    ],
+    "sizes": [
+      "Grand Haar + Earrings + Maang Tikka"
+    ],
+    "features": [
+      "22K Gold BIS Hallmarked Setting",
+      "Natural Emerald drops",
+      "Complete 3-piece bridal suite"
+    ],
+    "stock": 4,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.010Z",
+    "updatedAt": "2026-10-13T12:07:04.010Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c25",
+    "name": "South Indian Temple Gold Kasu Mala Bridal Set",
+    "slug": "south-indian-temple-gold-kasu-mala-bridal-set",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Bridal Haar & Sets",
+    "price": 48500,
+    "originalPrice": 55000,
+    "discountPercent": 12,
+    "rating": 4.9,
+    "reviewCount": 92,
+    "images": [
+      "https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Traditional 22K gold coin Kasu Mala featuring embossed Lakshmi motifs and sparkling kemp stone ruby surrounds.",
+    "variants": [
+      "22K Antique Yellow Gold"
+    ],
+    "sizes": [
+      "Long Kasu Mala + Jhumka Pair"
+    ],
+    "features": [
+      "Authentic South Indian temple craftsmanship",
+      "22K BIS Hallmarked Gold (38g)",
+      "Accompanied by Temple Purity Certificate"
+    ],
+    "stock": 6,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.010Z",
+    "updatedAt": "2026-10-13T12:07:04.010Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c26",
+    "name": "Antique 22K Gold Guluband Collar & Earrings Suite",
+    "slug": "antique-22k-gold-guluband-collar-earrings-suite",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Bridal Haar & Sets",
+    "price": 42000,
+    "originalPrice": 48000,
+    "discountPercent": 12,
+    "rating": 4.9,
+    "reviewCount": 81,
+    "images": [
+      "https://images.pexels.com/photos/1395306/pexels-photo-1395306.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Close-fitting royal Rajputi Guluband necklace adorned with red rubies, freshwater pearls, and fine filigree panels.",
+    "variants": [
+      "22K Gold & Royal Ruby"
+    ],
+    "sizes": [
+      "Collar + Matching Earrings"
+    ],
+    "features": [
+      "Traditional Rajasthani Guluband design",
+      "Adjustable velvet brocade ribbon back",
+      "22K BIS Hallmarked Purity"
+    ],
+    "stock": 5,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c27",
+    "name": "24K Gold Lakshmi Coin Locket & Chain Set",
+    "slug": "24k-gold-lakshmi-coin-locket-chain-set",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Gold Lockets & Pendants",
+    "price": 21500,
+    "originalPrice": 25000,
+    "discountPercent": 14,
+    "rating": 5,
+    "reviewCount": 185,
+    "images": [
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Auspicious 24K pure gold Goddess Lakshmi embossed coin locket suspended from a 22K solid gold handcrafted rope chain.",
+    "variants": [
+      "24K Pure Gold Coin + 22K Chain"
+    ],
+    "sizes": [
+      "18 Inch Chain + Locket"
+    ],
+    "features": [
+      "24K Pure 999 Fine Gold Locket (5g)",
+      "22K Solid Gold Rope Chain (8g)",
+      "Accompanied by Swiss Gold Assay Certificate"
+    ],
+    "stock": 8,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c28",
+    "name": "18K Rose Gold Diamond Heart Pendant & Chain",
+    "slug": "18k-rose-gold-diamond-heart-pendant-chain",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Gold Lockets & Pendants",
+    "price": 15800,
+    "originalPrice": 18500,
+    "discountPercent": 15,
+    "rating": 4.8,
+    "reviewCount": 94,
+    "images": [
+      "https://images.pexels.com/photos/691046/pexels-photo-691046.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Contemporary puffed heart pendant crafted in 18K rose gold accented with brilliant micro-pave natural diamonds on an Italian box chain.",
+    "variants": [
+      "18K Rose Gold",
+      "18K Yellow Gold"
+    ],
+    "sizes": [
+      "16 Inch Chain + Pendant"
+    ],
+    "features": [
+      "18K Certified Rose Gold",
+      "Conflict-Free Natural Diamonds",
+      "Lobster lock Italian chain included"
+    ],
+    "stock": 12,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c29",
+    "name": "24K Solid Gold Divine Ganesha Embossed Pendant",
+    "slug": "24k-solid-gold-divine-ganesha-embossed-pendant",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Gold Lockets & Pendants",
+    "price": 18200,
+    "originalPrice": 21000,
+    "discountPercent": 13,
+    "rating": 5,
+    "reviewCount": 124,
+    "images": [
+      "https://images.pexels.com/photos/248077/pexels-photo-248077.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Sacred Lord Ganesha portrait embossed on 24K pure 999 gold bar frame with divine lotus edging.",
+    "variants": [
+      "24K Pure Gold 999"
+    ],
+    "sizes": [
+      "Locket Only (6.5g)"
+    ],
+    "features": [
+      "24K Pure 999 Hallmarked Gold",
+      "Laser etched high definition finish",
+      "Assay lab purity certificate included"
+    ],
+    "stock": 14,
+    "isFeatured": false,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c2a",
+    "name": "18K Gold & Turquoise Evil Eye Medallion Pendant",
+    "slug": "18k-gold-turquoise-evil-eye-medallion-pendant",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Gold Lockets & Pendants",
+    "price": 13900,
+    "originalPrice": 16000,
+    "discountPercent": 13,
+    "rating": 4.8,
+    "reviewCount": 79,
+    "images": [
+      "https://images.pexels.com/photos/177332/pexels-photo-177332.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Protective talisman pendant crafted in 18K gold featuring turquoise enamel and a sparkling diamond iris.",
+    "variants": [
+      "18K Yellow Gold & Turquoise",
+      "18K Rose Gold & Lapis"
+    ],
+    "sizes": [
+      "18 Inch Dainty Chain Included"
+    ],
+    "features": [
+      "18K Solid Gold construction",
+      "Vibrant protective enamel inlay",
+      "Perfect modern gifting piece"
+    ],
+    "stock": 16,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c2b",
+    "name": "22K Hallmarked Sacred Om Mantra Filigree Locket",
+    "slug": "22k-hallmarked-sacred-om-mantra-filigree-locket",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Gold Lockets & Pendants",
+    "price": 16700,
+    "originalPrice": 19500,
+    "discountPercent": 14,
+    "rating": 4.9,
+    "reviewCount": 98,
+    "images": [
+      "https://images.pexels.com/photos/230290/pexels-photo-230290.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Timeless sacred Om medallion surrounded by delicate 22K gold filigree wire rays and ruby center point.",
+    "variants": [
+      "22K Solid Gold"
+    ],
+    "sizes": [
+      "Pendant Only (7.2g)"
+    ],
+    "features": [
+      "22K BIS 916 Hallmark",
+      "High polish radiant sunshine border",
+      "Spiritual heirloom quality"
+    ],
+    "stock": 10,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c2c",
+    "name": "22K Solid Gold Carved Antique Kangan (Set of 2)",
+    "slug": "22k-solid-gold-carved-antique-kangan-set-of-2",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Temple Gold Bangles",
+    "price": 32000,
+    "originalPrice": 38000,
+    "discountPercent": 16,
+    "rating": 5,
+    "reviewCount": 110,
+    "images": [
+      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Pair of masterfully handcrafted 22K antique gold kangans featuring divine floral jaali work and screw pin side lock.",
+    "variants": [
+      "Size 2.4",
+      "Size 2.6",
+      "Size 2.8"
+    ],
+    "sizes": [
+      "Pair of 2 Bangles (24g)"
+    ],
+    "features": [
+      "22K Solid BIS Hallmarked Gold",
+      "Traditional hinge screw lock for easy wear",
+      "Antique matte gold heirloom finish"
+    ],
+    "stock": 6,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c2d",
+    "name": "Handcrafted Nakshi Lakshmi Temple Kada",
+    "slug": "handcrafted-nakshi-lakshmi-temple-kada",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Temple Gold Bangles",
+    "price": 28500,
+    "originalPrice": 33000,
+    "discountPercent": 14,
+    "rating": 4.9,
+    "reviewCount": 87,
+    "images": [
+      "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Heavy single Kada bracelet with deep-relief Nakshi carving of Goddess Lakshmi flanked by temple elephants.",
+    "variants": [
+      "Size 2.4",
+      "Size 2.6"
+    ],
+    "sizes": [
+      "Single Heavy Kada (20g)"
+    ],
+    "features": [
+      "Deep relief temple carving",
+      "22K Pure BIS Hallmarked Gold",
+      "Secure hinge mechanism"
+    ],
+    "stock": 7,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c2e",
+    "name": "22K Floral Ruby Studded Gold Churi (Set of 4)",
+    "slug": "22k-floral-ruby-studded-gold-churi-set-of-4",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Temple Gold Bangles",
+    "price": 45000,
+    "originalPrice": 52000,
+    "discountPercent": 13,
+    "rating": 5,
+    "reviewCount": 132,
+    "images": [
+      "https://images.pexels.com/photos/1097204/pexels-photo-1097204.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Set of 4 delicate bridal gold churis studded with Burma ruby florets and micro-beaded gold edges.",
+    "variants": [
+      "Set of 4 (Size 2.4)",
+      "Set of 4 (Size 2.6)"
+    ],
+    "sizes": [
+      "Set of 4 Bangles (32g)"
+    ],
+    "features": [
+      "Natural faceted rubies",
+      "22K Certified Hallmarked Gold",
+      "Seamless slip-on comfort design"
+    ],
+    "stock": 5,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c2f",
+    "name": "Royal Jaipur Openable Filigree Gold Bangle",
+    "slug": "royal-jaipur-openable-filigree-gold-bangle",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Temple Gold Bangles",
+    "price": 24900,
+    "originalPrice": 29000,
+    "discountPercent": 14,
+    "rating": 4.8,
+    "reviewCount": 65,
+    "images": [
+      "https://images.pexels.com/photos/2735973/pexels-photo-2735973.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Exquisite openable bangle crafted with delicate floral wire filigree and pearl cluster terminals.",
+    "variants": [
+      "Size 2.4",
+      "Size 2.6"
+    ],
+    "sizes": [
+      "Single Openable Bangle"
+    ],
+    "features": [
+      "Jaipur Royal Goldsmith design",
+      "Safety clip spring hinge",
+      "BIS 916 certified gold"
+    ],
+    "stock": 8,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c30",
+    "name": "Antique Finish 22K Gold Peacock Kada Cuff",
+    "slug": "antique-finish-22k-gold-peacock-kada-cuff",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Temple Gold Bangles",
+    "price": 31000,
+    "originalPrice": 36000,
+    "discountPercent": 14,
+    "rating": 4.9,
+    "reviewCount": 94,
+    "images": [
+      "https://images.pexels.com/photos/1413420/pexels-photo-1413420.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Stately 22K antique gold cuff featuring dual confronting peacock heads adorned with synthetic rubies and emeralds.",
+    "variants": [
+      "Free Size Adjustable Cuff"
+    ],
+    "sizes": [
+      "Adjustable Heavy Kada (22g)"
+    ],
+    "features": [
+      "Confronting Mayura peacock motif",
+      "Traditional antique finish 22K gold",
+      "Certified purity stamp"
+    ],
+    "stock": 6,
+    "isFeatured": false,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c31",
+    "name": "Uncut Polki Diamond 18K Gold Solitaire Ring",
+    "slug": "uncut-polki-diamond-18k-gold-solitaire-ring",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Gold Rings & Bands",
+    "price": 18500,
+    "originalPrice": 21500,
+    "discountPercent": 14,
+    "rating": 4.9,
+    "reviewCount": 89,
+    "images": [
+      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Royal statement ring featuring an uncut natural polki diamond center set in 18K solid yellow gold with delicate leaf filigree prongs.",
+    "variants": [
+      "Size 12",
+      "Size 14",
+      "Size 16"
+    ],
+    "sizes": [
+      "Standard Indian Ring Sizes"
+    ],
+    "features": [
+      "Natural Uncut Polki Diamond",
+      "18K Certified Yellow Gold",
+      "Signature vintage royal crown bezel"
+    ],
+    "stock": 14,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c32",
+    "name": "22K Gold Royal Peacock Statement Cocktail Ring",
+    "slug": "22k-gold-royal-peacock-statement-cocktail-ring",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Gold Rings & Bands",
+    "price": 15200,
+    "originalPrice": 17800,
+    "discountPercent": 15,
+    "rating": 4.9,
+    "reviewCount": 76,
+    "images": [
+      "https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Grand circular cocktail ring with 3D raised peacock in 22K gold, accented with emeralds, rubies, and seed pearl border.",
+    "variants": [
+      "Adjustable Size (Fits 12-18)"
+    ],
+    "sizes": [
+      "Statement Cocktail Ring"
+    ],
+    "features": [
+      "22K Hallmarked Gold (10.5g)",
+      "Traditional Jadau setting",
+      "Adjustable comfort band"
+    ],
+    "stock": 9,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c33",
+    "name": "18K Rose Gold Eternity Diamond Band",
+    "slug": "18k-rose-gold-eternity-diamond-band",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Gold Rings & Bands",
+    "price": 16800,
+    "originalPrice": 19500,
+    "discountPercent": 14,
+    "rating": 5,
+    "reviewCount": 112,
+    "images": [
+      "https://images.pexels.com/photos/744563/pexels-photo-744563.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Timeless eternity ring featuring continuous micro-pave brilliant diamonds set all around an 18K rose gold band.",
+    "variants": [
+      "Size 12",
+      "Size 14",
+      "Size 16"
+    ],
+    "sizes": [
+      "Stackable Band"
+    ],
+    "features": [
+      "18K Certified Rose Gold",
+      "Natural sparkling round diamonds",
+      "Comfort-fit curved inner wall"
+    ],
+    "stock": 12,
+    "isFeatured": false,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c34",
+    "name": "Heritage Navratna & Emerald 22K Gold Ring",
+    "slug": "heritage-navratna-emerald-22k-gold-ring",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Gold Rings & Bands",
+    "price": 19400,
+    "originalPrice": 22500,
+    "discountPercent": 14,
+    "rating": 4.8,
+    "reviewCount": 68,
+    "images": [
+      "https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Auspicious royal ring featuring a natural oval emerald center surrounded by the nine Vedic gemstone energies.",
+    "variants": [
+      "Size 14",
+      "Size 16"
+    ],
+    "sizes": [
+      "Traditional Astrological Ring"
+    ],
+    "features": [
+      "Natural Zambian Emerald centerpiece",
+      "22K BIS Hallmarked Solid Gold",
+      "Hand-set bezel mounting"
+    ],
+    "stock": 7,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c35",
+    "name": "22K Hand-Engraved Floral Gold Signet Ring",
+    "slug": "22k-hand-engraved-floral-gold-signet-ring",
+    "category": "Jewellery",
+    "categorySlug": "jewellery",
+    "subcategory": "Gold Rings & Bands",
+    "price": 13600,
+    "originalPrice": 15800,
+    "discountPercent": 14,
+    "rating": 4.9,
+    "reviewCount": 57,
+    "images": [
+      "https://images.pexels.com/photos/994517/pexels-photo-994517.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Subtle everyday luxury signet ring hand-chiselled with lotus motifs into solid 22K yellow gold.",
+    "variants": [
+      "Size 12",
+      "Size 14",
+      "Size 16"
+    ],
+    "sizes": [
+      "Classic Oval Signet"
+    ],
+    "features": [
+      "Solid 22K Yellow Gold (7.8g)",
+      "Artisan chisel engraving",
+      "Mirror high-polish finish"
+    ],
+    "stock": 11,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee7bac99793e66c0c36",
+    "name": "Glow Velvet Silk Foundation",
+    "slug": "glow-velvet-silk-foundation",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Face Foundations",
+    "price": 2499,
+    "originalPrice": 3000,
+    "discountPercent": 17,
+    "rating": 4.9,
+    "reviewCount": 142,
+    "images": [
+      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "A weightless, hydrating silk foundation crafted for Indian skintones. Delivers a soft-focus radiant glow with 16-hour breathable coverage.",
+    "variants": [
+      "Warm Ivory",
+      "Golden Beige",
+      "Almond Silk",
+      "Royal Honey"
+    ],
+    "sizes": [
+      "30 ml",
+      "50 ml"
+    ],
+    "features": [
+      "Infused with Hyaluronic Acid & Kashmiri Rose Water",
+      "16-Hour breathable wear with buildable medium-to-full coverage",
+      "Transfer-resistant, dermatologically tested, non-comedogenic"
+    ],
+    "stock": 45,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c37",
+    "name": "Radiant Glass Skin Illuminating Primer",
+    "slug": "radiant-glass-skin-illuminating-primer",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Face Foundations",
+    "price": 1699,
+    "originalPrice": 2000,
+    "discountPercent": 15,
+    "rating": 4.9,
+    "reviewCount": 104,
+    "images": [
+      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Prepares skin with a pearlescent dewy glow that grips foundation for all-day wear while blurring pores and texture.",
+    "variants": [
+      "Universal Pearl Glow",
+      "Golden Warm Dew"
+    ],
+    "sizes": [
+      "35 ml"
+    ],
+    "features": [
+      "Infused with 24k gold flakes & Niacinamide",
+      "Pore-blurring micro-silica matrix",
+      "Extends makeup longevity up to 18 hours"
+    ],
+    "stock": 35,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c38",
+    "name": "HD Pro Flawless Matte Foundation SPF 30",
+    "slug": "hd-pro-flawless-matte-foundation-spf-30",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Face Foundations",
+    "price": 2299,
+    "originalPrice": 2700,
+    "discountPercent": 15,
+    "rating": 4.8,
+    "reviewCount": 96,
+    "images": [
+      "https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Oil-controlling full coverage liquid foundation formulated for warm humid climates with broad spectrum mineral sun protection.",
+    "variants": [
+      "Warm Sand",
+      "Honey Caramel",
+      "Rich Chestnut"
+    ],
+    "sizes": [
+      "30 ml"
+    ],
+    "features": [
+      "Sweatproof & humidity-tested formula",
+      "SPF 30 broad spectrum PA+++",
+      "Oil-free velvet matte finish"
+    ],
+    "stock": 40,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c39",
+    "name": "Ayurvedic Saffron Tinted Hydra BB Cream",
+    "slug": "ayurvedic-saffron-tinted-hydra-bb-cream",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Face Foundations",
+    "price": 1499,
+    "originalPrice": 1800,
+    "discountPercent": 17,
+    "rating": 4.7,
+    "reviewCount": 82,
+    "images": [
+      "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Featherlight skin tint infused with pure Kashmiri saffron and Kumkumadi oil for natural, breathable everyday glow.",
+    "variants": [
+      "Light Bisque",
+      "Medium Sand",
+      "Deep Bronze"
+    ],
+    "sizes": [
+      "40 ml"
+    ],
+    "features": [
+      "Pure Kumkumadi Tailam & Saffron",
+      "Dewy natural no-makeup finish",
+      "Ultra-hydrating 24H moisture barrier"
+    ],
+    "stock": 50,
+    "isFeatured": false,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c3a",
+    "name": "Ultra-Creamy Full Coverage Radiant Concealer",
+    "slug": "ultra-creamy-full-coverage-radiant-concealer",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Face Foundations",
+    "price": 1199,
+    "originalPrice": 1450,
+    "discountPercent": 17,
+    "rating": 4.9,
+    "reviewCount": 115,
+    "images": [
+      "https://images.pexels.com/photos/2536965/pexels-photo-2536965.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Crease-proof liquid concealer that camouflages dark circles and blemishes while visibly brightening tired under-eyes.",
+    "variants": [
+      "Ivory Brightener",
+      "Warm Honey",
+      "Caramel Beige"
+    ],
+    "sizes": [
+      "8 ml"
+    ],
+    "features": [
+      "Non-creasing caffeine & peptide complex",
+      "Soft wand applicator for targeted sculpting",
+      "Waterproof 14-hour wear"
+    ],
+    "stock": 48,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c3b",
+    "name": "Royal Rosewood Satin Lipstick",
+    "slug": "royal-rosewood-satin-lipstick",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Lipsticks & Gloss",
+    "price": 1499,
+    "originalPrice": 1800,
+    "discountPercent": 17,
+    "rating": 4.8,
+    "reviewCount": 58,
+    "images": [
+      "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Enriched with Shea butter and Jojoba oil, this rich rosewood lipstick glides like butter and leaves an enchanting satin finish.",
+    "variants": [
+      "Royal Rosewood",
+      "Imperial Ruby",
+      "Vintage Coral",
+      "Mughal Nude"
+    ],
+    "sizes": [
+      "4.2g"
+    ],
+    "features": [
+      "Shea Butter & Jojoba Oil enrichment",
+      "Rich color payoff in a single swipe",
+      "Non-drying, plush satin cushion feel"
+    ],
+    "stock": 50,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c3c",
+    "name": "Velvet Matte Long-Wear Liquid Lip Trio",
+    "slug": "velvet-matte-long-wear-liquid-lip-trio",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Lipsticks & Gloss",
+    "price": 1799,
+    "originalPrice": 2200,
+    "discountPercent": 18,
+    "rating": 4.9,
+    "reviewCount": 120,
+    "images": [
+      "https://images.pexels.com/photos/2799605/pexels-photo-2799605.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Transfer-proof kiss-proof liquid lipstick set in three iconic bridal and festive tones that stay comfortable all day.",
+    "variants": [
+      "Nude Bride Collection",
+      "Crimson Royale Collection"
+    ],
+    "sizes": [
+      "3 x 3.5 ml"
+    ],
+    "features": [
+      "12-hour transfer-proof lightweight formula",
+      "Infused with Vitamin E & Almond Oil",
+      "Velvet powder finish without cracking"
+    ],
+    "stock": 36,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c3d",
+    "name": "24K Molten Gold Plumping Lip Elixir",
+    "slug": "24k-molten-gold-plumping-lip-elixir",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Lipsticks & Gloss",
+    "price": 1099,
+    "originalPrice": 1350,
+    "discountPercent": 19,
+    "rating": 4.9,
+    "reviewCount": 88,
+    "images": [
+      "https://images.pexels.com/photos/2697787/pexels-photo-2697787.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "High-shine mirror lip gloss infused with genuine 24K gold specks and peptide volumizers for glass-like full lips.",
+    "variants": [
+      "Molten Gold Glimmer",
+      "Rose Gold Shimmer"
+    ],
+    "sizes": [
+      "6 ml"
+    ],
+    "features": [
+      "Real 24k gold suspended micro-leaf",
+      "Gentle warming peptide plump technology",
+      "Non-sticky high glass reflection"
+    ],
+    "stock": 42,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c3e",
+    "name": "Imperial Red Velveteen Bridal Matte Lipstick",
+    "slug": "imperial-red-velveteen-bridal-matte-lipstick",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Lipsticks & Gloss",
+    "price": 1399,
+    "originalPrice": 1650,
+    "discountPercent": 15,
+    "rating": 5,
+    "reviewCount": 140,
+    "images": [
+      "https://images.pexels.com/photos/1377034/pexels-photo-1377034.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "The definitive royal bridal red designed to flatter every Indian complexion with a velvety non-drying matte texture.",
+    "variants": [
+      "Rani Red",
+      "Sindoor Crimson"
+    ],
+    "sizes": [
+      "4.2g"
+    ],
+    "features": [
+      "Custom curated royal Indian bridal red",
+      "Enriched with Argan Oil & Vitamin C",
+      "Magnetic gold luxury casing"
+    ],
+    "stock": 38,
+    "isFeatured": false,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c3f",
+    "name": "Rose Petal Nourishing Tinted Butter Balm",
+    "slug": "rose-petal-nourishing-tinted-butter-balm",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Lipsticks & Gloss",
+    "price": 899,
+    "originalPrice": 1100,
+    "discountPercent": 18,
+    "rating": 4.8,
+    "reviewCount": 65,
+    "images": [
+      "https://images.pexels.com/photos/3373745/pexels-photo-3373745.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Ultra-buttery conditioning lip balm made with organic beeswax and damask rose extract for natural berry flushed lips.",
+    "variants": [
+      "Sheer Mauve Rose",
+      "Warm Peach Honey"
+    ],
+    "sizes": [
+      "10 ml Squeeze Tube"
+    ],
+    "features": [
+      "Kashmiri Damask Rose extract",
+      "Deep moisture lock for dry lips",
+      "Subtle glossy natural sheen"
+    ],
+    "stock": 55,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c40",
+    "name": "Celestial Shimmer Eyeshadow Palette",
+    "slug": "celestial-shimmer-eyeshadow-palette",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Eyeshadow Palettes",
+    "price": 3499,
+    "originalPrice": 4000,
+    "discountPercent": 13,
+    "rating": 4.8,
+    "reviewCount": 119,
+    "images": [
+      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "A 16-shade palette featuring multidimensional glitters, velvety mattes, and regal molten metallics for breathtaking festive and bridal looks.",
+    "variants": [
+      "16 Shades Celestial Edition"
+    ],
+    "sizes": [
+      "16 Pan Luxury Palette"
+    ],
+    "features": [
+      "Buttery smooth single-swipe pigmentation",
+      "Zero fallout metallic foils & wet glitters",
+      "Includes dual-ended artisan blending brush"
+    ],
+    "stock": 25,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c41",
+    "name": "Royal Mughal Rich Jewel Tone 18-Pan Palette",
+    "slug": "royal-mughal-rich-jewel-tone-18-pan-palette",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Eyeshadow Palettes",
+    "price": 3899,
+    "originalPrice": 4500,
+    "discountPercent": 13,
+    "rating": 5,
+    "reviewCount": 165,
+    "images": [
+      "https://images.pexels.com/photos/2688991/pexels-photo-2688991.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Rich emeralds, sapphires, antique golds, and molten coppers inspired by Mughal royalty and royal Indian courts.",
+    "variants": [
+      "18-Shade Velvet Foil Edition"
+    ],
+    "sizes": [
+      "18 Pan Velvet Cased Palette"
+    ],
+    "features": [
+      "Ultra-pigmented jewel tone metallics",
+      "Velvet touch magnetic casing with HD mirror",
+      "Dermatologically and ophthalmologist tested"
+    ],
+    "stock": 20,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c42",
+    "name": "Everyday Nude & Champagne Shimmer Mini Palette",
+    "slug": "everyday-nude-champagne-shimmer-mini-palette",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Eyeshadow Palettes",
+    "price": 1999,
+    "originalPrice": 2400,
+    "discountPercent": 17,
+    "rating": 4.8,
+    "reviewCount": 94,
+    "images": [
+      "https://images.pexels.com/photos/3018845/pexels-photo-3018845.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Compact 9-shade edit of warm neutrals, soft caramels, and glistening champagne toppers for daily glam.",
+    "variants": [
+      "9 Shades Nude Edit"
+    ],
+    "sizes": [
+      "9 Pan Travel Palette"
+    ],
+    "features": [
+      "Travel-friendly pocket sized luxury compact",
+      "Soft transition shadows and bright toppers",
+      "All-day crease resistant formula"
+    ],
+    "stock": 35,
+    "isFeatured": false,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c43",
+    "name": "Velvet Matte Smokey Kohl & Gunmetal Quad",
+    "slug": "velvet-matte-smokey-kohl-gunmetal-quad",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Eyeshadow Palettes",
+    "price": 1599,
+    "originalPrice": 1900,
+    "discountPercent": 16,
+    "rating": 4.7,
+    "reviewCount": 71,
+    "images": [
+      "https://images.pexels.com/photos/3373739/pexels-photo-3373739.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "The ultimate 4-shade smokey eye kit featuring deep carbon black kohl, matte slate grey, and shimmering gunmetal sparkle.",
+    "variants": [
+      "Midnight Smokey Quad"
+    ],
+    "sizes": [
+      "4 Pan Quad"
+    ],
+    "features": [
+      "Infused with organic black almond soot",
+      "Buildable smudge-friendly cream-to-powder",
+      "Waterproof long-wear formula"
+    ],
+    "stock": 30,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c44",
+    "name": "Golden Hour Sunset & Rose Gold Eyeshadow Palette",
+    "slug": "golden-hour-sunset-rose-gold-eyeshadow-palette",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Eyeshadow Palettes",
+    "price": 2799,
+    "originalPrice": 3200,
+    "discountPercent": 13,
+    "rating": 4.9,
+    "reviewCount": 108,
+    "images": [
+      "https://images.pexels.com/photos/2113855/pexels-photo-2113855.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Captivating warm sunset pinks, rich terracotta, and molten rose gold glitters that evoke royal dusk palaces.",
+    "variants": [
+      "12 Shades Sunset Rose Edition"
+    ],
+    "sizes": [
+      "12 Pan Palette"
+    ],
+    "features": [
+      "Multi-chrome color-shifting duo foils",
+      "High-adhesion wet glitter formula",
+      "Cruelty-free & Paraben-free"
+    ],
+    "stock": 28,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c45",
+    "name": "24K Gold Hydrating Setting Spray",
+    "slug": "24k-gold-hydrating-setting-spray",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Blushes & Highlighters",
+    "price": 1199,
+    "originalPrice": 1500,
+    "discountPercent": 20,
+    "rating": 4.8,
+    "reviewCount": 67,
+    "images": [
+      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Weightless micro-mist that locks in makeup for 24 hours while giving a luminous dew with genuine 24K gold particles and rose hydrosol.",
+    "variants": [
+      "Dewy Gold Glow",
+      "Matte Velvet Lock"
+    ],
+    "sizes": [
+      "100 ml"
+    ],
+    "features": [
+      "24K micro-gold suspended particles",
+      "Kashmiri damask rose water base",
+      "Melts powder layers into flawless second-skin"
+    ],
+    "stock": 45,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c46",
+    "name": "Molten Gold Liquid Face & Body Shimmer",
+    "slug": "molten-gold-liquid-face-body-shimmer",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Blushes & Highlighters",
+    "price": 1499,
+    "originalPrice": 1850,
+    "discountPercent": 19,
+    "rating": 5,
+    "reviewCount": 92,
+    "images": [
+      "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Multipurpose liquid drops for collarbones, cheekbones, and shoulders that create an ethereal candlelit sheen without glitter chunkiness.",
+    "variants": [
+      "Molten Bronze",
+      "Sunlit Champagne",
+      "Rose Gold Glow"
+    ],
+    "sizes": [
+      "30 ml Dropper Bottle"
+    ],
+    "features": [
+      "Zero chunky glitter micro-pearl suspension",
+      "Transfer-proof after 60-second drydown",
+      "Blendable over foundation or on bare skin"
+    ],
+    "stock": 38,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c47",
+    "name": "Terracotta Rose Silk Baked Mineral Blush",
+    "slug": "terracotta-rose-silk-baked-mineral-blush",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Blushes & Highlighters",
+    "price": 1350,
+    "originalPrice": 1600,
+    "discountPercent": 16,
+    "rating": 4.9,
+    "reviewCount": 84,
+    "images": [
+      "https://images.pexels.com/photos/3373726/pexels-photo-3373726.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Slow-baked on Italian terracotta tiles to deliver a velvety swirl of warm rose pigment and luminous golden shimmer.",
+    "variants": [
+      "Warm Terracotta",
+      "Spiced Plum",
+      "Peach Glow"
+    ],
+    "sizes": [
+      "8g Dome Compact"
+    ],
+    "features": [
+      "Handmade Italian baked mineral formula",
+      "Seamless buildable flush with natural luminosity",
+      "Includes velvet pouch & mirror compact"
+    ],
+    "stock": 35,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c48",
+    "name": "Petal Glow Water-Light Liquid Cheek Tint",
+    "slug": "petal-glow-water-light-liquid-cheek-tint",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Blushes & Highlighters",
+    "price": 1150,
+    "originalPrice": 1400,
+    "discountPercent": 18,
+    "rating": 4.8,
+    "reviewCount": 79,
+    "images": [
+      "https://images.pexels.com/photos/3373727/pexels-photo-3373727.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Hydrating serum blush that melts into cheekbones like watercolor, leaving a healthy lit-from-within flush.",
+    "variants": [
+      "Dusty Rose",
+      "Poppy Coral",
+      "Berry Wine"
+    ],
+    "sizes": [
+      "12 ml Wand Bottle"
+    ],
+    "features": [
+      "Infused with Hyaluronic Acid & Aloe Vera",
+      "Dewy glass-skin finish that doesn't lift foundation",
+      "Finger or sponge blendable in seconds"
+    ],
+    "stock": 40,
+    "isFeatured": false,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.011Z",
+    "updatedAt": "2026-10-13T12:07:04.011Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c49",
+    "name": "Luminary Diamond Dust Baked Highlighter",
+    "slug": "luminary-diamond-dust-baked-highlighter",
+    "category": "Makeup",
+    "categorySlug": "makeup",
+    "subcategory": "Blushes & Highlighters",
+    "price": 1699,
+    "originalPrice": 2000,
+    "discountPercent": 15,
+    "rating": 4.9,
+    "reviewCount": 110,
+    "images": [
+      "https://images.pexels.com/photos/3373728/pexels-photo-3373728.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Pressed highlighting powder with crushed diamond prisms that catch the light from every single angle.",
+    "variants": [
+      "Pure Champagne Gold",
+      "Celestial Platinum"
+    ],
+    "sizes": [
+      "10g Embossed Pan"
+    ],
+    "features": [
+      "Silky micro-milled diamond luster",
+      "Zero powdery chalkiness",
+      "Royal gold compact with full mirror"
+    ],
+    "stock": 32,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c4a",
+    "name": "Rose Quartz Luxury Press-On Nails Set",
+    "slug": "rose-quartz-luxury-press-on-nails-set",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Press-On Kits",
+    "price": 999,
+    "originalPrice": 1299,
+    "discountPercent": 23,
+    "rating": 4.9,
+    "reviewCount": 86,
+    "images": [
+      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Salon-quality reusable press-on nails featuring a hand-painted rose quartz marble effect, subtle gold leaf veining, and glossy gel finish.",
+    "variants": [
+      "Almond Medium",
+      "Coffin Long",
+      "Square Short"
+    ],
+    "sizes": [
+      "Set of 24 Nails + Kit"
+    ],
+    "features": [
+      "Reusable up to 5 times with gentle removal",
+      "Custom hand-painted salon quality finish",
+      "Includes professional nail glue, tabs, cuticle stick & buffer"
+    ],
+    "stock": 35,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c4b",
+    "name": "24K Gold Leaf & Chrome Foil Press-On Kit",
+    "slug": "24k-gold-leaf-chrome-foil-press-on-kit",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Press-On Kits",
+    "price": 2100,
+    "originalPrice": 2500,
+    "discountPercent": 16,
+    "rating": 4.9,
+    "reviewCount": 104,
+    "images": [
+      "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Haute couture mirror chrome press-on nails featuring hand-applied 24k gold leaf foil and crystal rhinestone tips.",
+    "variants": [
+      "Mirror Gold Coffin",
+      "Rose Chrome Stiletto"
+    ],
+    "sizes": [
+      "Set of 24 Nails"
+    ],
+    "features": [
+      "Custom handmade luxury nail art",
+      "Dual application options: Glue or Sticky Tabs",
+      "Includes alcohol prep pads & salon file"
+    ],
+    "stock": 28,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c4c",
+    "name": "French Ombre Nude Soft Gel Press-On Nails",
+    "slug": "french-ombre-nude-soft-gel-press-on-nails",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Press-On Kits",
+    "price": 1650,
+    "originalPrice": 1950,
+    "discountPercent": 15,
+    "rating": 4.9,
+    "reviewCount": 92,
+    "images": [
+      "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Classy gradient French tip gel nails designed for timeless bridal and office elegance with zero salon waiting time.",
+    "variants": [
+      "Classic French Almond",
+      "Micro French Square"
+    ],
+    "sizes": [
+      "Set of 24 Nails"
+    ],
+    "features": [
+      "Natural curved gel bed for seamless fit",
+      "Waterproof flexi-mould acrylic",
+      "Includes cuticle pusher & mini buffer"
+    ],
+    "stock": 32,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c4d",
+    "name": "Emerald & Velvet Gold Luxury Bridal Press-On Kit",
+    "slug": "emerald-velvet-gold-luxury-bridal-press-on-kit",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Press-On Kits",
+    "price": 1899,
+    "originalPrice": 2300,
+    "discountPercent": 17,
+    "rating": 5,
+    "reviewCount": 78,
+    "images": [
+      "https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Regal dark emerald green nails embellished with hand-placed golden Swarovski crystals and filigree patterns.",
+    "variants": [
+      "Emerald Royale Coffin",
+      "Emerald Almond"
+    ],
+    "sizes": [
+      "Set of 24 Nails + Tool Kit"
+    ],
+    "features": [
+      "Triple gel cured for chip-proof 3-week wear",
+      "Genuine Swarovski micro-crystals",
+      "Full salon prep kit included"
+    ],
+    "stock": 22,
+    "isFeatured": false,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c4e",
+    "name": "Ballerina Coffin Glossy Marble Press-On Suite",
+    "slug": "ballerina-coffin-glossy-marble-press-on-suite",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Press-On Kits",
+    "price": 1450,
+    "originalPrice": 1750,
+    "discountPercent": 17,
+    "rating": 4.8,
+    "reviewCount": 63,
+    "images": [
+      "https://images.unsplash.com/photo-1522337094846-8a818192de1f?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Subtle pink blush marble with delicate white swirls and glossy topcoat for an effortless elevated manicure.",
+    "variants": [
+      "Blush Pink Marble",
+      "Ivory Gold Marble"
+    ],
+    "sizes": [
+      "Set of 24 Nails"
+    ],
+    "features": [
+      "Ultra-thin cuticle edge for realistic blend",
+      "Non-damaging adhesive technology",
+      "Reusable travel storage case"
+    ],
+    "stock": 30,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c4f",
+    "name": "Nihara Velvet Gel Shine Nail Lacquer",
+    "slug": "nihara-velvet-gel-shine-nail-lacquer",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Gel Lacquer",
+    "price": 799,
+    "originalPrice": 999,
+    "discountPercent": 20,
+    "rating": 4.8,
+    "reviewCount": 72,
+    "images": [
+      "https://images.pexels.com/photos/3997380/pexels-photo-3997380.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Pro-salon high-pigment gel formula with plumping high-gloss resin. Lasts up to 14 days without UV lamp or chipping.",
+    "variants": [
+      "Royal Crimson",
+      "Gilded Champagne",
+      "Midnight Noir",
+      "Petal Nude"
+    ],
+    "sizes": [
+      "12 ml"
+    ],
+    "features": [
+      "No UV lamp required; air dries like gel",
+      "Infused with Keratin and Camellia oil",
+      "10-free non-toxic clean formula"
+    ],
+    "stock": 50,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c50",
+    "name": "Holographic Diamond Mirror Chrome Polish",
+    "slug": "holographic-diamond-mirror-chrome-polish",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Gel Lacquer",
+    "price": 950,
+    "originalPrice": 1200,
+    "discountPercent": 20,
+    "rating": 4.8,
+    "reviewCount": 61,
+    "images": [
+      "https://images.pexels.com/photos/3997381/pexels-photo-3997381.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Ultra-sparkly diamond dust nail polish that catches rainbow prismatic light reflections with every movement.",
+    "variants": [
+      "Diamond Hologram",
+      "Rose Gold Dust"
+    ],
+    "sizes": [
+      "14 ml"
+    ],
+    "features": [
+      "Reflective prismatic diamond particles",
+      "Quick dry formula in under 60 seconds",
+      "10-Free non-toxic nail polish base"
+    ],
+    "stock": 45,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c51",
+    "name": "Royal Velvet Burgundy High-Shine UV Gel Polish",
+    "slug": "royal-velvet-burgundy-high-shine-uv-gel-polish",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Gel Lacquer",
+    "price": 649,
+    "originalPrice": 850,
+    "discountPercent": 24,
+    "rating": 4.9,
+    "reviewCount": 88,
+    "images": [
+      "https://images.pexels.com/photos/3997382/pexels-photo-3997382.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Intense, dramatic deep wine burgundy gel lacquer with glass-like high gloss and 3-week wear longevity.",
+    "variants": [
+      "Deep Wine Burgundy",
+      "Black Cherry"
+    ],
+    "sizes": [
+      "15 ml"
+    ],
+    "features": [
+      "Salon-grade salon soak-off formula",
+      "Smooth self-leveling brush",
+      "Zero streaks or shrink back"
+    ],
+    "stock": 40,
+    "isFeatured": false,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c52",
+    "name": "Glazed Donut Milky White UV Gel Lacquer",
+    "slug": "glazed-donut-milky-white-uv-gel-lacquer",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Gel Lacquer",
+    "price": 599,
+    "originalPrice": 750,
+    "discountPercent": 20,
+    "rating": 4.9,
+    "reviewCount": 114,
+    "images": [
+      "https://images.pexels.com/photos/3997383/pexels-photo-3997383.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "The viral glazed donut sheer milky white base designed for clean aesthetic manicures and chrome layering.",
+    "variants": [
+      "Milky Coconut",
+      "Vanilla Glaze"
+    ],
+    "sizes": [
+      "15 ml"
+    ],
+    "features": [
+      "Sheer buildable milky coverage",
+      "Flawless chrome powder base",
+      "High UV resistance without yellowing"
+    ],
+    "stock": 52,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c53",
+    "name": "Diamond Shield Gel Base & No-Wipe Top Coat Duo",
+    "slug": "diamond-shield-gel-base-no-wipe-top-coat-duo",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Gel Lacquer",
+    "price": 899,
+    "originalPrice": 1150,
+    "discountPercent": 22,
+    "rating": 5,
+    "reviewCount": 130,
+    "images": [
+      "https://images.pexels.com/photos/3997384/pexels-photo-3997384.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Essential salon pair containing ultra-strong rubber base coat and glass-hard no-wipe shiny top coat.",
+    "variants": [
+      "Base + Glossy Top Duo",
+      "Base + Velvet Matte Top Duo"
+    ],
+    "sizes": [
+      "2 x 15 ml Bottles"
+    ],
+    "features": [
+      "Prevents lifting and peeling up to 28 days",
+      "No sticky residue; zero wipe needed",
+      "Scratch-resistant crystal glass barrier"
+    ],
+    "stock": 60,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c54",
+    "name": "Liquid Silver Mirror Chrome Nail Powder & Sponge",
+    "slug": "liquid-silver-mirror-chrome-nail-powder-sponge",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Chrome Nail Art",
+    "price": 749,
+    "originalPrice": 950,
+    "discountPercent": 21,
+    "rating": 4.9,
+    "reviewCount": 95,
+    "images": [
+      "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Ultra-fine liquid chrome mirror pigment that buffs into a pure liquid metal reflection without specks or graininess.",
+    "variants": [
+      "Mirror Liquid Silver",
+      "White Gold Chrome"
+    ],
+    "sizes": [
+      "2g Jar + 2 Applicator Sponges"
+    ],
+    "features": [
+      "Ultra-fine micronized metallic particles",
+      "Instant mirror reflection in seconds",
+      "Works seamlessly over gel topcoat"
+    ],
+    "stock": 45,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c55",
+    "name": "3D Rose Gold Aurora Chrome Magic Powder Cushion Pen",
+    "slug": "3d-rose-gold-aurora-chrome-magic-powder-cushion-pen",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Chrome Nail Art",
+    "price": 699,
+    "originalPrice": 899,
+    "discountPercent": 22,
+    "rating": 4.8,
+    "reviewCount": 78,
+    "images": [
+      "https://images.pexels.com/photos/3997385/pexels-photo-3997385.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "No-mess sponge cushion pen filled with rose gold chrome powder for precise, spill-free chrome nail art.",
+    "variants": [
+      "Rose Gold Aurora",
+      "Sunset Bronze"
+    ],
+    "sizes": [
+      "Pen Applicator"
+    ],
+    "features": [
+      "Zero-spill spring-loaded powder cushion",
+      "Creates stunning glazed chrome effects",
+      "Clean application without airborne dust"
+    ],
+    "stock": 50,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c56",
+    "name": "Chameleon Opal Holographic Chrome Nail Flakes",
+    "slug": "chameleon-opal-holographic-chrome-nail-flakes",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Chrome Nail Art",
+    "price": 599,
+    "originalPrice": 750,
+    "discountPercent": 20,
+    "rating": 4.9,
+    "reviewCount": 64,
+    "images": [
+      "https://images.pexels.com/photos/3997386/pexels-photo-3997386.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Ultra-thin color-shifting opal flakes that transform from green to purple to gold over dark or light base coats.",
+    "variants": [
+      "Opal Chameleon",
+      "Galaxy Violet"
+    ],
+    "sizes": [
+      "3g Container"
+    ],
+    "features": [
+      "Color-shifting prism effect",
+      "Can be buffed smooth or kept as textured flakes",
+      "Solvent-resistant salon grade"
+    ],
+    "stock": 40,
+    "isFeatured": false,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c57",
+    "name": "24K Leaf Gold Transfer Foil & Foil Glue Set",
+    "slug": "24k-leaf-gold-transfer-foil-foil-glue-set",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Chrome Nail Art",
+    "price": 649,
+    "originalPrice": 800,
+    "discountPercent": 19,
+    "rating": 4.8,
+    "reviewCount": 52,
+    "images": [
+      "https://images.pexels.com/photos/3997387/pexels-photo-3997387.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Crinkled luxury metallic transfer foils in gold, champagne, and rose copper paired with fast-curing foil glue.",
+    "variants": [
+      "Gold & Rose Foil Set"
+    ],
+    "sizes": [
+      "10 Foil Rolls + 15ml Glue"
+    ],
+    "features": [
+      "Effortless full coverage or distressed foil look",
+      "Fast 30-second lamp tacky layer adhesion",
+      "High-shine salon quality metallic leaf"
+    ],
+    "stock": 35,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c58",
+    "name": "Mermaid Pearl Iridescent Glaze Chrome Art Dust",
+    "slug": "mermaid-pearl-iridescent-glaze-chrome-art-dust",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Chrome Nail Art",
+    "price": 799,
+    "originalPrice": 999,
+    "discountPercent": 20,
+    "rating": 5,
+    "reviewCount": 102,
+    "images": [
+      "https://images.pexels.com/photos/3997388/pexels-photo-3997388.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "The ultimate bridal glazed chrome powder producing a delicate pink-pearl and golden-hued iridescence on nude nails.",
+    "variants": [
+      "Mermaid Pearl Sheen",
+      "Ice White Glaze"
+    ],
+    "sizes": [
+      "2g Jar + Sponge"
+    ],
+    "features": [
+      "Celebrity favorite glazed donut effect",
+      "Soft ethereal shine under natural sunlight",
+      "Includes silicon rubbing tool"
+    ],
+    "stock": 48,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c59",
+    "name": "Nourishing Argan Cuticle Oil Elixir",
+    "slug": "nourishing-argan-cuticle-oil-elixir",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Cuticle Elixirs",
+    "price": 890,
+    "originalPrice": 1100,
+    "discountPercent": 19,
+    "rating": 4.8,
+    "reviewCount": 78,
+    "images": [
+      "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Restorative cuticle oil pen infused with Organic Argan Oil, Sweet Almond Oil, Vitamin E, and natural Rose petals.",
+    "variants": [
+      "Kashmiri Rose",
+      "Sweet Vanilla"
+    ],
+    "sizes": [
+      "15 ml Dropper Bottle"
+    ],
+    "features": [
+      "Intensive nailbed hydrator for strong glossy nails",
+      "Fast-absorbing non-greasy botanical formula",
+      "Prevents hangnails and nail splitting"
+    ],
+    "stock": 50,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c5a",
+    "name": "Damascus Rose & Jojoba Cuticle Conditioning Pen",
+    "slug": "damascus-rose-jojoba-cuticle-conditioning-pen",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Cuticle Elixirs",
+    "price": 599,
+    "originalPrice": 750,
+    "discountPercent": 20,
+    "rating": 4.9,
+    "reviewCount": 94,
+    "images": [
+      "https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Pocket-sized twist pen with soft brush applicator filled with Moroccan jojoba and damask rose oils.",
+    "variants": [
+      "Damask Rose Pen (Twin Pack)"
+    ],
+    "sizes": [
+      "2 x 5 ml Twist Pens"
+    ],
+    "features": [
+      "Convenient handbag & travel leakproof pen",
+      "Instantly softens hard dry cuticles",
+      "Light floral natural botanical scent"
+    ],
+    "stock": 65,
+    "isFeatured": false,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c5b",
+    "name": "Sweet Almond & Keratin Deep Nail Repair Serum",
+    "slug": "sweet-almond-keratin-deep-nail-repair-serum",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Cuticle Elixirs",
+    "price": 699,
+    "originalPrice": 850,
+    "discountPercent": 18,
+    "rating": 4.8,
+    "reviewCount": 68,
+    "images": [
+      "https://images.pexels.com/photos/3997390/pexels-photo-3997390.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Fortifying treatment for brittle, peeling nails damaged from acrylics or gel extensions with plant-based keratin.",
+    "variants": [
+      "Keratin Repair"
+    ],
+    "sizes": [
+      "15 ml Bottle with Pipette"
+    ],
+    "features": [
+      "Strengthens nail plate and prevents ridge formation",
+      "Sweet almond oil & bamboo extract rich in silica",
+      "Visible results in 7 days"
+    ],
+    "stock": 45,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c5c",
+    "name": "French Lavender Soothing Cuticle & Hand Butter",
+    "slug": "french-lavender-soothing-cuticle-hand-butter",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Cuticle Elixirs",
+    "price": 549,
+    "originalPrice": 700,
+    "discountPercent": 22,
+    "rating": 4.9,
+    "reviewCount": 82,
+    "images": [
+      "https://images.pexels.com/photos/3997391/pexels-photo-3997391.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Rich nighttime balm made with pure shea butter, coconut wax, and French lavender essential oil.",
+    "variants": [
+      "Lavender Butter Jar"
+    ],
+    "sizes": [
+      "50g Metal Tin"
+    ],
+    "features": [
+      "Deep moisture overnight rescue therapy",
+      "Calming aromatherapeutic lavender aroma",
+      "100% natural organic unrefined butters"
+    ],
+    "stock": 40,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c5d",
+    "name": "Cold-Pressed Avocado & Vitamin E Growth Elixir",
+    "slug": "cold-pressed-avocado-vitamin-e-growth-elixir",
+    "category": "Nails",
+    "categorySlug": "nails",
+    "subcategory": "Cuticle Elixirs",
+    "price": 499,
+    "originalPrice": 650,
+    "discountPercent": 23,
+    "rating": 4.7,
+    "reviewCount": 56,
+    "images": [
+      "https://images.pexels.com/photos/3997392/pexels-photo-3997392.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Stimulates rapid nail growth and provides vital fatty acids to dry cuticles and peeling nail matrices.",
+    "variants": [
+      "Avocado & Vitamin E"
+    ],
+    "sizes": [
+      "12 ml Dropper"
+    ],
+    "features": [
+      "Cold-pressed virgin avocado and olive squalane",
+      "Promotes flexible, unbreakable nail growth",
+      "Gentle hypoallergenic formulation"
+    ],
+    "stock": 55,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c5e",
+    "name": "Jasmine & Amber Soy Wax Candle",
+    "slug": "jasmine-amber-soy-wax-candle",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Soy Wax Jar Candles",
+    "price": 1999,
+    "originalPrice": 2499,
+    "discountPercent": 20,
+    "rating": 4.9,
+    "reviewCount": 175,
+    "images": [
+      "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Hand-poured 100% natural soy wax candle with notes of royal Mogra Jasmine, warm Amber, and subtle Sandalwood. Poured into a matte rose gold ceramic jar.",
+    "variants": [
+      "Rose Gold Jar",
+      "Matte Noir Jar"
+    ],
+    "sizes": [
+      "300g (55hr Burn Time)"
+    ],
+    "features": [
+      "100% Natural Soy wax with lead-free cotton wick",
+      "Notes: Royal Mogra, Warm Golden Amber, Mysore Sandalwood",
+      "Clean, smoke-free burn time of 55+ hours"
+    ],
+    "stock": 40,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c5f",
+    "name": "Royal Mogra & Mysuru Sandalwood Jar Candle",
+    "slug": "royal-mogra-mysuru-sandalwood-jar-candle",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Soy Wax Jar Candles",
+    "price": 2499,
+    "originalPrice": 2900,
+    "discountPercent": 14,
+    "rating": 5,
+    "reviewCount": 148,
+    "images": [
+      "https://images.pexels.com/photos/3270223/pexels-photo-3270223.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Exquisite hand-poured double-wick candle with intoxicating night-blooming Indian mogra and warm Mysuru sandalwood.",
+    "variants": [
+      "Gold Brass Jar",
+      "White Marble Vessel"
+    ],
+    "sizes": [
+      "400g (70hr Burn Time)"
+    ],
+    "features": [
+      "Dual crackling wooden wicks",
+      "Sustainably sourced botanical essential oils",
+      "Includes engraved gold lid"
+    ],
+    "stock": 30,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c60",
+    "name": "Gold Ceramic Scented Candle Luxury Gift Box",
+    "slug": "gold-ceramic-scented-candle-luxury-gift-box",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Soy Wax Jar Candles",
+    "price": 3200,
+    "originalPrice": 3800,
+    "discountPercent": 15,
+    "rating": 5,
+    "reviewCount": 160,
+    "images": [
+      "https://images.unsplash.com/photo-1572726729207-a78d6feb18d7?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Trio of mini luxury scented candles (Mogra, Amber Oud, Vanilla Rose) presented in an embossed gold foil gift box.",
+    "variants": [
+      "Royal Trio Gift Edition"
+    ],
+    "sizes": [
+      "3 x 100g Mini Jars"
+    ],
+    "features": [
+      "Perfect festive & wedding luxury gift set",
+      "Includes golden wick trimmer & matches",
+      "Total 75+ hours combined burn time"
+    ],
+    "stock": 20,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c61",
+    "name": "Dark Kashmiri Oud & Golden Amber Ceramic Candle",
+    "slug": "dark-kashmiri-oud-golden-amber-ceramic-candle",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Soy Wax Jar Candles",
+    "price": 2199,
+    "originalPrice": 2600,
+    "discountPercent": 15,
+    "rating": 4.9,
+    "reviewCount": 98,
+    "images": [
+      "https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Deep, smokey agarwood and sweet golden amber hand-poured in a textured black stoneware jar.",
+    "variants": [
+      "Black Stoneware Jar"
+    ],
+    "sizes": [
+      "350g (60hr Burn Time)"
+    ],
+    "features": [
+      "Crackling wood wick for cozy hearth sound",
+      "Rare Kashmiri oud resin extraction",
+      "Smokeless, clean eco-friendly burn"
+    ],
+    "stock": 28,
+    "isFeatured": false,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c62",
+    "name": "French Vanilla & Ceylon Cinnamon Artisan Soy Candle",
+    "slug": "french-vanilla-ceylon-cinnamon-artisan-soy-candle",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Soy Wax Jar Candles",
+    "price": 1799,
+    "originalPrice": 2100,
+    "discountPercent": 14,
+    "rating": 4.8,
+    "reviewCount": 75,
+    "images": [
+      "https://images.unsplash.com/photo-1543257580-7269da773bf5?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "A comforting blend of Madagascar vanilla bean, freshly ground Ceylon cinnamon, and toasted nutmeg.",
+    "variants": [
+      "Amber Glass Jar"
+    ],
+    "sizes": [
+      "280g (50hr Burn Time)"
+    ],
+    "features": [
+      "Food-grade organic essential oils",
+      "Cotton braided wick",
+      "Upcycled amber apothecary jar with lid"
+    ],
+    "stock": 35,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c63",
+    "name": "Aroma Reed Diffuser & Room Spray Set",
+    "slug": "aroma-reed-diffuser-room-spray-set",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Reed Diffusers",
+    "price": 2200,
+    "originalPrice": 2600,
+    "discountPercent": 15,
+    "rating": 4.9,
+    "reviewCount": 92,
+    "images": [
+      "https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&w=1200&q=85"
+    ],
+    "description": "Elevate your sanctuary with pure essential oils of Himalayan lavender, white tea, and royal mogra jasmine.",
+    "variants": [
+      "Royal Mogra & White Tea",
+      "Himalayan Lavender & Cedar"
+    ],
+    "sizes": [
+      "150ml Diffuser + 100ml Mist"
+    ],
+    "features": [
+      "Continuous flameless fragrance up to 90 days",
+      "Includes 8 natural rattan reeds",
+      "Zero alcohol, 100% pure botanical fragrance oils"
+    ],
+    "stock": 25,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c64",
+    "name": "Kashmiri Damask Rose & Sandalwood Reed Diffuser",
+    "slug": "kashmiri-damask-rose-sandalwood-reed-diffuser",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Reed Diffusers",
+    "price": 1899,
+    "originalPrice": 2250,
+    "discountPercent": 16,
+    "rating": 5,
+    "reviewCount": 112,
+    "images": [
+      "https://images.pexels.com/photos/4198139/pexels-photo-4198139.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Enchanting aroma of fresh morning Kashmiri roses blended with creamy Mysore sandalwood in an ombre gold glass bottle.",
+    "variants": [
+      "Ombre Gold Flacon"
+    ],
+    "sizes": [
+      "200 ml Oil + 10 Fiber Reeds"
+    ],
+    "features": [
+      "High fragrance diffusion for master bedrooms and salons",
+      "Lasts up to 120 days continuously",
+      "Phthalate-free botanical oil blend"
+    ],
+    "stock": 30,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c65",
+    "name": "Imperial Oud Wood & Smoked Leather Luxury Diffuser",
+    "slug": "imperial-oud-wood-smoked-leather-luxury-diffuser",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Reed Diffusers",
+    "price": 2399,
+    "originalPrice": 2800,
+    "discountPercent": 14,
+    "rating": 4.9,
+    "reviewCount": 88,
+    "images": [
+      "https://images.pexels.com/photos/4198140/pexels-photo-4198140.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Opulent masculine accords of dark agarwood, smoked leather, and spicy pink pepper for royal executive living.",
+    "variants": [
+      "Matte Noir Bottle"
+    ],
+    "sizes": [
+      "200 ml + 8 Black Porous Reeds"
+    ],
+    "features": [
+      "Intense throw suitable for large living halls",
+      "Slow evaporating solvent-free formulation",
+      "Heavy weighted glass bottle with gold collar"
+    ],
+    "stock": 22,
+    "isFeatured": false,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c66",
+    "name": "French Lavender & White Sage Calming Reed Diffuser",
+    "slug": "french-lavender-white-sage-calming-reed-diffuser",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Reed Diffusers",
+    "price": 1699,
+    "originalPrice": 2000,
+    "discountPercent": 15,
+    "rating": 4.8,
+    "reviewCount": 76,
+    "images": [
+      "https://images.pexels.com/photos/4198141/pexels-photo-4198141.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Therapeutic herbal notes designed to dissolve anxiety, promote tranquil sleep, and refresh room air gently.",
+    "variants": [
+      "Frosted White Bottle"
+    ],
+    "sizes": [
+      "150 ml + 8 Natural Reeds"
+    ],
+    "features": [
+      "Pure Provence lavender essential oil",
+      "Aromatherapeutic sleep aid for bedside use",
+      "Alcohol-free gentle dispersion"
+    ],
+    "stock": 35,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c67",
+    "name": "Himalayan Lemongrass & Italian Bergamot Energy Diffuser",
+    "slug": "himalayan-lemongrass-italian-bergamot-energy-diffuser",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Reed Diffusers",
+    "price": 1599,
+    "originalPrice": 1900,
+    "discountPercent": 16,
+    "rating": 4.7,
+    "reviewCount": 65,
+    "images": [
+      "https://images.pexels.com/photos/4198142/pexels-photo-4198142.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Vibrant zesty citrus bouquet that instantly revitalizes workspaces, lobbies, and kitchen areas.",
+    "variants": [
+      "Clear Apothecary Bottle"
+    ],
+    "sizes": [
+      "150 ml + 8 Reeds"
+    ],
+    "features": [
+      "Natural uplifting mood enhancer",
+      "Naturally deodorizes indoor air",
+      "Continuous freshness for 75+ days"
+    ],
+    "stock": 38,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c68",
+    "name": "Botanical Rose & Kashmiri Oud Room Mist",
+    "slug": "botanical-rose-kashmiri-oud-room-mist",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Aroma Room Sprays",
+    "price": 1450,
+    "originalPrice": 1750,
+    "discountPercent": 17,
+    "rating": 4.8,
+    "reviewCount": 88,
+    "images": [
+      "https://images.pexels.com/photos/4198143/pexels-photo-4198143.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Opulent room mist combining damask rose petals, smoky agarwood (Oud), and spicy cardamom for instant royal ambiance.",
+    "variants": [
+      "Kashmiri Oud & Rose",
+      "Wild Bergamot & Cedar"
+    ],
+    "sizes": [
+      "200 ml Spray"
+    ],
+    "features": [
+      "Instant mood-lifting luxury room spray",
+      "Safe on fabrics, curtains, and linens",
+      "Cruelty-free & phthalate-free fragrance"
+    ],
+    "stock": 40,
+    "isFeatured": true,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c69",
+    "name": "Raat Ki Rani (Night Blooming Jasmine) Room Spray",
+    "slug": "raat-ki-rani-night-blooming-jasmine-room-spray",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Aroma Room Sprays",
+    "price": 1199,
+    "originalPrice": 1450,
+    "discountPercent": 17,
+    "rating": 4.9,
+    "reviewCount": 96,
+    "images": [
+      "https://images.pexels.com/photos/3865676/pexels-photo-3865676.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Captures the intoxicating night breeze of blooming Indian queen of the night jasmine flowers and warm amber musk.",
+    "variants": [
+      "Pure Jasmine Dew"
+    ],
+    "sizes": [
+      "200 ml Ultra-Fine Spray Bottle"
+    ],
+    "features": [
+      "High concentration of natural jasmine hydrosol",
+      "Long-lasting fragrance lingering up to 8 hours",
+      "Zero stain aerosol-free fine trigger mister"
+    ],
+    "stock": 45,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.012Z",
+    "updatedAt": "2026-10-13T12:07:04.012Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c6a",
+    "name": "Royal Mysore Sandalwood Calming Aura Mist",
+    "slug": "royal-mysore-sandalwood-calming-aura-mist",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Aroma Room Sprays",
+    "price": 1350,
+    "originalPrice": 1600,
+    "discountPercent": 16,
+    "rating": 5,
+    "reviewCount": 118,
+    "images": [
+      "https://images.pexels.com/photos/4202392/pexels-photo-4202392.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Sacred Mysuru sandalwood distilled with holy basil and cedarwood to cleanse spaces and induce deep meditation.",
+    "variants": [
+      "Mysore Sandalwood & Tulsi"
+    ],
+    "sizes": [
+      "180 ml Glass Amber Bottle"
+    ],
+    "features": [
+      "Steam-distilled pure sandalwood oil",
+      "Spiritual puja & meditation space purifier",
+      "Non-toxic, safe for pets and children"
+    ],
+    "stock": 35,
+    "isFeatured": false,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.013Z",
+    "updatedAt": "2026-10-13T12:07:04.013Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c6b",
+    "name": "Neroli & Sweet Orange Rejuvenating Room Spray",
+    "slug": "neroli-sweet-orange-rejuvenating-room-spray",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Aroma Room Sprays",
+    "price": 1099,
+    "originalPrice": 1300,
+    "discountPercent": 15,
+    "rating": 4.7,
+    "reviewCount": 62,
+    "images": [
+      "https://images.pexels.com/photos/672051/pexels-photo-672051.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Sparkling orange blossom and sunshine citrus designed to instantly clear stagnant odors and uplift spirit.",
+    "variants": [
+      "Italian Neroli & Orange"
+    ],
+    "sizes": [
+      "200 ml Spray"
+    ],
+    "features": [
+      "Natural enzyme odor neutralizer",
+      "Crisp refreshing morning fragrance",
+      "Biodegradable plant-based formula"
+    ],
+    "stock": 50,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.013Z",
+    "updatedAt": "2026-10-13T12:07:04.013Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c6c",
+    "name": "French Eucalyptus & Wild Peppermint Spa Room Mist",
+    "slug": "french-eucalyptus-wild-peppermint-spa-room-mist",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Aroma Room Sprays",
+    "price": 1150,
+    "originalPrice": 1390,
+    "discountPercent": 17,
+    "rating": 4.8,
+    "reviewCount": 74,
+    "images": [
+      "https://images.pexels.com/photos/724925/pexels-photo-724925.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Turn your bathroom or bedroom into an authentic 5-star steam spa with crisp blue eucalyptus and cooling mint.",
+    "variants": [
+      "Spa Eucalyptus & Mint"
+    ],
+    "sizes": [
+      "200 ml Spray"
+    ],
+    "features": [
+      "Clears airways and eases breathing",
+      "Perfect shower & steam aromatherapeutic ritual",
+      "Zero synthetic dyes or parabens"
+    ],
+    "stock": 42,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.013Z",
+    "updatedAt": "2026-10-13T12:07:04.013Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c6d",
+    "name": "Hand-Poured Velvet Amber Aromatherapy Wax Melts",
+    "slug": "hand-poured-velvet-amber-aromatherapy-wax-melts",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Wax Melts",
+    "price": 1100,
+    "originalPrice": 1350,
+    "discountPercent": 18,
+    "rating": 4.9,
+    "reviewCount": 115,
+    "images": [
+      "https://images.pexels.com/photos/6758532/pexels-photo-6758532.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Pack of 12 soy wax melt cubes topped with dried rose petals, French lavender buds, and golden mica powder.",
+    "variants": [
+      "Velvet Amber & Vanilla",
+      "Spiced Saffron & Jasmine"
+    ],
+    "sizes": [
+      "Pack of 12 Cubes (120g)"
+    ],
+    "features": [
+      "Works with electric or tea-light oil burners",
+      "Up to 120 hours of scent release per pack",
+      "Hand-decorated with real botanical petals"
+    ],
+    "stock": 65,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.013Z",
+    "updatedAt": "2026-10-13T12:07:04.013Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c6e",
+    "name": "Royal Mogra Petal Soy Wax Botanical Melts (6-Pack)",
+    "slug": "royal-mogra-petal-soy-wax-botanical-melts-6-pack",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Wax Melts",
+    "price": 899,
+    "originalPrice": 1100,
+    "discountPercent": 18,
+    "rating": 5,
+    "reviewCount": 92,
+    "images": [
+      "https://images.pexels.com/photos/1070534/pexels-photo-1070534.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Heart-shaped soy melts topped with crushed dried mogra flowers and golden pearl shimmer that melts into molten gold.",
+    "variants": [
+      "Mogra Petal Hearts"
+    ],
+    "sizes": [
+      "Pack of 6 Large Melts (90g)"
+    ],
+    "features": [
+      "Shimmering gold mica swirl when melted",
+      "Pure organic soy wax and coconut oil",
+      "Intense Indian floral festive scent"
+    ],
+    "stock": 55,
+    "isFeatured": true,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.013Z",
+    "updatedAt": "2026-10-13T12:07:04.013Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c6f",
+    "name": "Warm Spiced Chai & Vanilla Aromatherapy Melts",
+    "slug": "warm-spiced-chai-vanilla-aromatherapy-melts",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Wax Melts",
+    "price": 799,
+    "originalPrice": 999,
+    "discountPercent": 20,
+    "rating": 4.8,
+    "reviewCount": 81,
+    "images": [
+      "https://images.pexels.com/photos/1666067/pexels-photo-1666067.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Comforting notes of freshly crushed cardamom, ginger, clove, and rich vanilla custard in snap-bar form.",
+    "variants": [
+      "Spiced Chai Snap Bar"
+    ],
+    "sizes": [
+      "Snap Bar (85g)"
+    ],
+    "features": [
+      "Breakable 10-piece snap bar",
+      "Over 60 hours of warm aroma",
+      "Clean melt pool with easy cleanup"
+    ],
+    "stock": 48,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.013Z",
+    "updatedAt": "2026-10-13T12:07:04.013Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c70",
+    "name": "French Lavender & Chamomile Sleep Therapy Melts",
+    "slug": "french-lavender-chamomile-sleep-therapy-melts",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Wax Melts",
+    "price": 849,
+    "originalPrice": 1050,
+    "discountPercent": 19,
+    "rating": 4.9,
+    "reviewCount": 76,
+    "images": [
+      "https://images.pexels.com/photos/1898555/pexels-photo-1898555.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Infused with blue chamomile buds and lavender blossoms to create a soothing bedtime haven in any bedroom.",
+    "variants": [
+      "Lavender Sleep Clouds"
+    ],
+    "sizes": [
+      "Pack of 8 Cloud Melts (80g)"
+    ],
+    "features": [
+      "Natural sleep inducing essential oils",
+      "Soft pastel lilac colored soy wax",
+      "Non-toxic clean emission"
+    ],
+    "stock": 50,
+    "isFeatured": false,
+    "isBestseller": true,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.013Z",
+    "updatedAt": "2026-10-13T12:07:04.013Z"
+  },
+  {
+    "_id": "6ace1ee8bac99793e66c0c71",
+    "name": "Golden Oud & Smoked Patchouli Luxury Wax Melts",
+    "slug": "golden-oud-smoked-patchouli-luxury-wax-melts",
+    "category": "Candles",
+    "categorySlug": "candles",
+    "subcategory": "Wax Melts",
+    "price": 920,
+    "originalPrice": 1150,
+    "discountPercent": 20,
+    "rating": 4.9,
+    "reviewCount": 88,
+    "images": [
+      "https://images.pexels.com/photos/208052/pexels-photo-208052.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "description": "Sensual dark oud, Indonesian patchouli, and golden amber dusted with antique bronze shimmer.",
+    "variants": [
+      "Golden Oud Hexagons"
+    ],
+    "sizes": [
+      "Pack of 8 Hexagon Melts (95g)"
+    ],
+    "features": [
+      "Deep earthy luxury fragrance profile",
+      "Shimmering bronze swirl effect",
+      "Long-lasting hot scent throw"
+    ],
+    "stock": 44,
+    "isFeatured": false,
+    "isBestseller": false,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.013Z",
+    "updatedAt": "2026-10-13T12:07:04.013Z"
+  }
+]

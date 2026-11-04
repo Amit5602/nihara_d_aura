@@ -1,23 +1,33 @@
 {
-  "name": "nihara-backend",
+  "name": "nihara-d-aura-backend",
   "version": "1.0.0",
-  "description": "Nihara D Aura Customer API Backend",
-  "main": "src/server.js",
-  "type": "module",
+  "description": "Nihara D'Aura Official Backend API",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "nihara",
+    "nihara-d-aura",
+    "ecommerce",
+    "backend",
+    "api"
+  ],
+  "author": "Nihara D'Aura",
+  "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^9.10.3",
-    "nodemailer": "^10.2.1",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.9.5",
+    "nodemailer": "^10.0.3",
     "socket.io": "^4.8.4"
   },
   "devDependencies": {
-    "dotenv": "^18.0.7",
     "nodemon": "^3.1.14"
   }
 }

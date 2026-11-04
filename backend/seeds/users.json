@@ -1,0 +1,15 @@
+[
+  {
+    "_id": "6ace1ee8bac99793e66c0c76",
+    "name": "Amit Kumar",
+    "email": "amitky2056@gmail.com",
+    "phone": "+91 8004116370",
+    "password": "$2a$10$hashedpassworddummy",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    "tier": "Royal Elite",
+    "rewardPoints": 450,
+    "__v": 0,
+    "createdAt": "2026-10-13T12:07:04.643Z",
+    "updatedAt": "2026-10-13T12:07:04.643Z"
+  }
+]
