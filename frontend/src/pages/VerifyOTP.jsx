@@ -42,13 +42,27 @@ export default function VerifyOTP() {
 
   const handleOtpChange = (val, idx) => {
     const next = [...otp];
-    next[idx] = val.slice(-1);
+    const digits = val.replace(/\D/g, '');
+
+    if (digits.length > 1) {
+      digits.slice(0, 6).split('').forEach((digit, digitIdx) => {
+        next[digitIdx] = digit;
+      });
+    } else {
+      next[idx] = digits;
+    }
     setOtp(next);
 
-    // Auto-focus next input
-    if (val && idx < 5) {
-      const nextInput = document.getElementById(`otp-${idx + 1}`);
+    const nextFocusIndex = digits.length > 1
+      ? Math.min(digits.length, 5)
+      : idx + 1;
+    if (digits && nextFocusIndex < 6) {
+      const nextInput = document.getElementById(`otp-${nextFocusIndex}`);
       if (nextInput) nextInput.focus();
+    }
+
+    if (next.every((digit) => /^\d$/.test(digit))) {
+      void handleVerify(undefined, next.join(''));
     }
   };
 
@@ -60,12 +74,11 @@ export default function VerifyOTP() {
     }
   };
 
-  const handleVerify = async (event) => {
+  const handleVerify = async (event, verificationCode = otp.join('').trim()) => {
     event?.preventDefault();
     if (verificationInProgress.current) return;
 
-    const fullOtp = otp.join('').trim();
-    if (fullOtp.length < 6) {
+    if (!/^\d{6}$/.test(verificationCode)) {
       setErrorMessage('Please enter the complete 6-digit verification code.');
       return;
     }
@@ -80,7 +93,7 @@ export default function VerifyOTP() {
     setErrorMessage('');
 
     try {
-      const res = await api.verifyOtp(email, fullOtp);
+      const res = await api.verifyOtp(email, verificationCode);
 
       if (res && res.success) {
         const verifiedUser = res.user || res.data?.user;

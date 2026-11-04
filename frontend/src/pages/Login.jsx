@@ -49,6 +49,7 @@ export default function Login() {
   // 6-digit OTP array
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
   const otpInputsRef = useRef([]);
+  const verificationInProgress = useRef(false);
 
   // States
   const [errorMessage, setErrorMessage] = useState('');
@@ -150,6 +151,9 @@ export default function Login() {
       if (otpInputsRef.current[nextFocus]) {
         otpInputsRef.current[nextFocus].focus();
       }
+      if (newOtp.every((digit) => /^\d$/.test(digit))) {
+        void handleVerifyOtp(undefined, newOtp.join(''));
+      }
       return;
     }
 
@@ -160,6 +164,10 @@ export default function Login() {
       if (otpInputsRef.current[idx + 1]) {
         otpInputsRef.current[idx + 1].focus();
       }
+    }
+
+    if (newOtp.every((digit) => /^\d$/.test(digit))) {
+      void handleVerifyOtp(undefined, newOtp.join(''));
     }
   };
 
@@ -200,22 +208,23 @@ export default function Login() {
   };
 
   // Submit OTP Verification
-  const handleVerifyOtp = async (e) => {
-    e.preventDefault();
-    setErrorMessage('');
-    const fullOtp = otp.join('').trim();
+  const handleVerifyOtp = async (e, verificationCode = otp.join('').trim()) => {
+    e?.preventDefault();
+    if (verificationInProgress.current) return;
 
-    if (fullOtp.length < 6) {
+    setErrorMessage('');
+
+    if (!/^\d{6}$/.test(verificationCode)) {
       setErrorMessage('Please enter the complete 6-digit verification code.');
       return;
     }
 
+    verificationInProgress.current = true;
     setIsSubmitting(true);
     const cleanEmail = identifier.trim().toLowerCase();
 
     try {
-      const res = await api.verifyOtp(cleanEmail, fullOtp);
-      setIsSubmitting(false);
+      const res = await api.verifyOtp(cleanEmail, verificationCode);
 
       if (res && res.success) {
         const verifiedUser = res.user || res.data?.user || {
@@ -243,8 +252,10 @@ export default function Login() {
         setErrorMessage(res?.message || 'Invalid or expired verification code.');
       }
     } catch (err) {
-      setIsSubmitting(false);
       setErrorMessage(err.message || 'Verification error. Please try again.');
+    } finally {
+      verificationInProgress.current = false;
+      setIsSubmitting(false);
     }
   };
 

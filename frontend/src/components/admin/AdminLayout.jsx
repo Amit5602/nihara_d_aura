@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
-import ToastContainer from './Toast';
 import useAdminStore from '../../store/useAdminStore';
 import { useSocket } from '../../context/SocketContext';
 
@@ -59,8 +58,6 @@ export default function AdminLayout() {
             <Outlet />
           </div>
         </main>
-
-        <ToastContainer />
       </div>
     </div>
   );

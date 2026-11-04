@@ -8,10 +8,7 @@ const DEFAULT_SETTINGS = {
 };
 
 const showFailure = (set, error) => {
-  set((state) => ({
-    error: error.message,
-    toasts: [...state.toasts, { id: Date.now(), type: 'error', message: error.message }]
-  }));
+  set({ error: error.message });
   return null;
 };
 
@@ -40,8 +37,6 @@ const useAdminStore = create((set, get) => ({
   inventoryAdjustments: [],
   settings: DEFAULT_SETTINGS,
   checklist: { date: null, items: {} },
-  toasts: [],
-
   toggleDark: () => set((state) => {
     const darkMode = !state.darkMode;
     localStorage.setItem('nda_dark', String(darkMode));
@@ -202,12 +197,7 @@ const useAdminStore = create((set, get) => ({
     return { checklist: { date: today, items } };
   }),
 
-  addToast: (toast) => set((state) => ({
-    toasts: [...state.toasts, { id: Date.now(), ...toast }],
-  })),
-  removeToast: (id) => set((state) => ({
-    toasts: state.toasts.filter((toast) => toast.id !== id),
-  })),
+  addToast: () => {},
 
   exportData: () => {
     const { products, orders, appointments, coupons, settings } = get();
